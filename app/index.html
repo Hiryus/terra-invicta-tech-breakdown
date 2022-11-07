@@ -32,7 +32,11 @@
                 <ul v-if="opened.includes(role)" class="content">
                     <li v-for="project in techByRole(role)" :key="project.dataName" :class="tree.getStatus(project.dataName)" class="card">
                         <h2 @click.left.prevent="project.show = !project.show" @click.right.prevent="project.known = !project.known">
-                            <span class="name">T{{tree.getLevel(project.dataName)}} - {{project.displayName || project.friendlyName}}</span>
+                            <img v-if="project.type === 'project'" src="img/project.svg" height="20">
+                            <img v-if="project.type === 'technology'" src="img/science.svg" height="24">
+                            <span class="name">
+                                L{{tree.getLevel(project.dataName)}} - {{capitalize(project.type)}} {{project.displayName || project.friendlyName}}
+                            </span>
                             <span class="points">{{Intl.NumberFormat().format(tree.getMissingScience(project.dataName))}}</span>
                         </h2>
                         <div v-if="project.show" class="content">
@@ -45,6 +49,8 @@
                                 Requirements:
                                 <ul>
                                     <li v-for="req in tree.getAllRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = !tree.get(req).known">
+                                        <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
+                                        <img v-if="tree.get(req).type === 'technology'" src="img/science.svg" height="12">
                                         {{tree.get(req).displayName || tree.get(req).friendlyName}}
                                     </li>
                                 </ul>

@@ -48,6 +48,12 @@ const app = Vue.createApp({
     },
 
     methods: {
+        capitalize(value) {
+            if (typeof value !== 'string' || value.length <1) {
+                return value;
+            }
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        },
         getDescription(project) {
             if (project.description) {
                 return project.description;

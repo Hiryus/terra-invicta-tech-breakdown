@@ -31,7 +31,6 @@ header {
     text-align: center;
 }
 .role > .content {
-    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -42,7 +41,6 @@ header {
 .card {
     border: 1px solid rgb(200, 200, 200);
     margin: 5px;
-    width: 500px;
 }
 .card h2, .card .description, .card .requirements {
     padding: 10px;
@@ -56,9 +54,15 @@ header {
 .card h2 {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     font-size: 110%;
     font-weight: bold;
+}
+.card h2 img {
+    margin-right: 10px;
+}
+.card .points {
+    flex-grow: 10;
+    text-align: right;
 }
 .card > .content {
     background-color: rgba(0, 0, 0, .30);
