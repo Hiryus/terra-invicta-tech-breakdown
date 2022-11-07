@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Technologies breakdown - Terra Invicta</title>
+
+    <meta name="description" content="A different view of the Terra Invicta technology tree.">
+    <meta name="author" content="SitePoint">
+    <meta property="og:title" content="Technologies breakdown - Terra Invicta">
+    <meta property="og:description" content="A different view of the Terra Invicta technology tree.">
+
+    <link rel="icon" href="game/favicon.png">
+    <link rel="icon" href="game/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=1.0">
+</head>
+
+<body>
+    <div id="app">
+        <ul v-if="!loading">
+            <header>
+                <input type="search" v-model="search" placeholder="filter by name...">
+                <input type="submit" @click="loadSave" value="Load game save">
+                <input type="submit" @click="open('img/help.png')" value="Help!">
+            </header>
+            <li v-for="role in roles" class="role">
+                <h1 @click="toggle(role)">
+                    {{role}}
+                </h1>
+                <ul v-if="opened.includes(role)" class="content">
+                    <li v-for="project in techByRole(role)" :key="project.dataName" :class="tree.getStatus(project.dataName)" class="card">
+                        <h2 @click.left.prevent="project.show = !project.show" @click.right.prevent="project.known = !project.known">
+                            <span class="name">T{{tree.getLevel(project.dataName)}} - {{project.displayName || project.friendlyName}}</span>
+                            <span class="points">{{Intl.NumberFormat().format(tree.getMissingScience(project.dataName))}}</span>
+                        </h2>
+                        <div v-if="project.show" class="content">
+                            <div class="description">
+                                Description:
+                                <br>
+                                {{getDescription(project)}}
+                            </div>
+                            <div v-if="project.prereqs.length > 0" class="requirements">
+                                Requirements:
+                                <ul>
+                                    <li v-for="req in tree.getAllRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = !tree.get(req).known">
+                                        {{tree.get(req).displayName || tree.get(req).friendlyName}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/pako@2/dist/pako.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/vue.js"></script>
+</body>
+</html>

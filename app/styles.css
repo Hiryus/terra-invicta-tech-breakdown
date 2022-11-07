@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(47, 49, 54);
+    color: rgb(230, 230, 230);
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+h1, h2 {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.role {
+    background-color: rgb(28, 45, 55);
+    margin: 0 10vw;
+}
+.role h1 {
+    background-color: rgba(0, 0, 0, .20);
+    border-bottom: 2px solid rgb(28, 45, 55);
+    cursor: pointer;
+    font-size: 120%;
+    padding: 5px;
+    text-align: center;
+}
+.role > .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.card {
+    border: 1px solid rgb(200, 200, 200);
+    margin: 5px;
+    width: 500px;
+}
+.card h2, .card .description, .card .requirements {
+    padding: 10px;
+}
+.card .description {
+    border-top: 1px solid rgba(200, 200, 200);
+}
+.card .requirements {
+    border-top: 1px solid rgba(230, 230, 230, .5);
+}
+.card h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 110%;
+    font-weight: bold;
+}
+.card > .content {
+    background-color: rgba(0, 0, 0, .30);
+}
+
+.requirements ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.requirements li {
+    border: 1px solid rgba(230, 230, 230, .5);
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 3px;
+    padding: 3px 5px;
+}
+
+.available {
+    background-color: rgb(51, 86, 108);
+}
+.known {
+    background-color: rgb(67, 117, 66);
+}
+.locked {
+    background-color: rgb(109, 29, 20);
+}
