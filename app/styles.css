@@ -1,3 +1,8 @@
+@media (min-width: 768px) {
+    body {
+        padding: 0 10vw;
+    }
+}
 body {
     background-color: rgb(47, 49, 54);
     color: rgb(230, 230, 230);
@@ -20,8 +25,8 @@ header {
 
 .role {
     background-color: rgb(28, 45, 55);
-    margin: 0 10vw;
 }
+
 .role h1 {
     background-color: rgba(0, 0, 0, .20);
     border-bottom: 2px solid rgb(28, 45, 55);
