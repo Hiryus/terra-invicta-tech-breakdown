@@ -12,7 +12,7 @@ ul {
     margin: 0px;
     padding: 0px;
 }
-h1, h2 {
+h1, h2, h3 {
     margin: 0px;
 }
 
@@ -47,23 +47,23 @@ header {
     border: 1px solid rgb(200, 200, 200);
     margin: 5px;
 }
-.card h2, .card .description, .card .requirements {
-    padding: 10px;
-}
-.card .description {
+.card .content {
     border-top: 1px solid rgba(200, 200, 200);
-}
-.card .requirements {
-    border-top: 1px solid rgba(230, 230, 230, .5);
+    padding: 0px 10px 10px 10px;
 }
 .card h2 {
     cursor: pointer;
     display: flex;
     font-size: 110%;
     font-weight: bold;
+    padding: 10px;
 }
 .card h2 img {
     margin-right: 10px;
+}
+.card h3 {
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 .card .points {
     flex-grow: 10;

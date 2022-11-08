@@ -6,9 +6,15 @@ class Tree {
     addTechnology(source, type) {
         this.data[source.dataName] = source;
         this.data[source.dataName].type = type;
-        this.data[source.dataName].prereqs = source.prereqs.filter(p => p.length > 0);
         this.data[source.dataName].known = false;
         this.data[source.dataName].role = (type === 'project') ? source.AI_projectRole : source.AI_techRole;
+
+        // Clean up empty values in arrays
+        this.data[source.dataName].effects = source.effects.filter(x => typeof x === 'string' && x.length > 0);
+        this.data[source.dataName].prereqs = source.prereqs.filter(x => typeof x === 'string' && x.length > 0);
+        this.data[source.dataName].resourcesGranted = source.resourcesGranted
+            ? source.resourcesGranted.filter(x => typeof x.resource === 'string' && x.resource.length > 0)
+            : [];
     }
 
     get(dataName) {
@@ -77,52 +83,28 @@ class Tree {
         return prereqsCost + tech.researchCost ;
     }
 
-    setTranslation(dataName, type, value) {
-        if (dataName in this.data) {
-            this.data[dataName][type] = value;
+    async load() {
+        // Fetch data
+        const [projectTemplate, technologyTemplate, projectTranslation, technologyTranslation] = await Promise.all([
+            Parser.loadTemplates('game/TIProjectTemplate.json'),
+            Parser.loadTemplates('game/TITechTemplate.json'),
+            Parser.loadTranslations('game/TIProjectTemplate.en'),
+            Parser.loadTranslations('game/TITechTemplate.en'),
+        ]);
+
+        // Load templates
+        for (const project of projectTemplate) {
+            this.addTechnology(project, 'project');
+        }
+        for (const technology of technologyTemplate) {
+            this.addTechnology(technology, 'technology');
+        }
+
+        // Load translations
+        for (const { type, key, value } of [...projectTranslation, ...technologyTranslation]) {
+            if (key in this.data) {
+                this.data[key][type] = value;
+            }
         }
     }
-}
-
-async function loadJSON(url) {
-    const response = await fetch(url);
-    return await response.json();
-}
-
-async function loadTranslation(url) {
-    // Fetch data
-    const response = await fetch(url);
-    const data = await response.text();
-
-    // Parse data line by line
-    return data.split('\n')
-        .map((line) => line.split(/[.=]/, 4))
-        .filter((array) => array.length === 4)
-        .map(([_, type, key, value]) => ({ type, key, value }));
-}
-
-async function buildTree() {
-    const tree = new Tree();
-
-    const projects = await loadJSON('game/TIProjectTemplate.json');
-    for (const project of projects) {
-        project.prereqs = project.prereqs.filter(x => typeof x === 'string' && x.length > 0);
-        tree.addTechnology(project, 'project');
-    }
-    const projectsTranslation = await loadTranslation('game/TIProjectTemplate.en');
-    for (const { type, key, value } of projectsTranslation) {
-        tree.setTranslation(key, type, value);
-    }
-
-    const technologies = await loadJSON('game/TITechTemplate.json');
-    for (const technology of technologies) {
-        technology.prereqs = technology.prereqs.filter(x => typeof x === 'string' && x.length > 0);
-        tree.addTechnology(technology, 'technology');
-    }
-    const technologiesTranslation = await loadTranslation('game/TITechTemplate.en');
-    for (const { type, key, value } of technologiesTranslation) {
-        tree.setTranslation(key, type, value);
-    }
-    
-    return tree;
 }

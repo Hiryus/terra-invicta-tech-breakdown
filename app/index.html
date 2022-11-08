@@ -41,12 +41,23 @@
                         </h2>
                         <div v-if="project.show" class="content">
                             <div class="description">
-                                Description:
-                                <br>
+                                <h3>Description:</h3>
                                 {{getDescription(project)}}
+                                <div v-if="project.effects.length > 0">
+                                    <h3>Effects:</h3>
+                                    <ul v-for="dataName in project.effects">
+                                        <li>{{effects.getDescription(dataName)}}</li>
+                                    </ul>
+                                </div>
+                                <div v-if="project.resourcesGranted.length > 0">
+                                    <h3>Resources granted:</h3>
+                                    <ul v-for="{ resource, value } in project.resourcesGranted" :key="resource">
+                                        <li>{{value}} {{resource}}</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div v-if="project.prereqs.length > 0" class="requirements">
-                                Requirements:
+                                <h3>Requirements:</h3>
                                 <ul>
                                     <li v-for="req in tree.getAllRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = !tree.get(req).known">
                                         <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
@@ -64,6 +75,8 @@
 
     <script src="https://unpkg.com/pako@2/dist/pako.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/effects.js"></script>
     <script src="js/tree.js"></script>
     <script src="js/vue.js"></script>
 </body>

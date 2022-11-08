@@ -16,20 +16,26 @@ function unzip(input) {
 const app = Vue.createApp({
     data() {
         return {
+            // Data
+            effects: new Effects(),
+            tree: new Tree(),
+            // Filters
             loading: true,
             opened: [],
-            tree: null,
             search: '',
         };
     },
 
-    created() {
-        buildTree()
-            .then(tree => {
-                this.tree = tree;
-                this.loading = false;
-            })
-            .catch(console.error);
+    async created() {
+        try {
+            await Promise.all([
+                this.tree.load(),
+                this.effects.load(),
+            ]);
+            this.loading = false;
+        } catch (err) {
+            console.error(err);
+        }
     },
 
     computed: {
@@ -56,33 +62,37 @@ const app = Vue.createApp({
         },
         getDescription(project) {
             if (project.description) {
-                return project.description;
+                return project.description.trim();
             }
             if (project.summary && project.summary.match(/<[a-z]+>/i)) {
                 return `Unlock module ${project.summary}.`;
             }
             if (project.summary) {
-                return project.summary;
+                return project.summary.trim();
             }
             return null;
         },
         async loadSave() {
-            // Read file
-            const file = await selectFile();
-            const contents = await file.arrayBuffer();
-            const string = unzip(contents);
+            try {
+                // Read file
+                const file = await selectFile();
+                const contents = await file.arrayBuffer();
+                const string = unzip(contents);
 
-            // Parse data
-            // NB: the save may contains the symbol "Infinity" which is not a valid JSON value.
-            // Since we don't care about the data where this happens, we monkey-replace the value by a valid integer.
-            const data = JSON.parse(string.replaceAll('Infinity', 1));
-            const knownTechnologgies = data.gamestates['PavonisInteractive.TerraInvicta.TIGlobalResearchState'][0].Value.finishedTechsNames;
-            const knownProjects = data.gamestates['PavonisInteractive.TerraInvicta.TIFactionState'][0].Value.finishedProjectNames;
+                // Parse data
+                // NB: the save may contains the symbol "Infinity" which is not a valid JSON value.
+                // Since we don't care about the data where this happens, we monkey-replace the value by a valid integer.
+                const data = JSON.parse(string.replaceAll('Infinity', 1));
+                const knownTechnologgies = data.gamestates['PavonisInteractive.TerraInvicta.TIGlobalResearchState'][0].Value.finishedTechsNames;
+                const knownProjects = data.gamestates['PavonisInteractive.TerraInvicta.TIFactionState'][0].Value.finishedProjectNames;
 
-            // Update tech tree
-            // NB: We only add completed techs/projects here, we don't reset those which were known before
-            for (const dataName of [...knownTechnologgies, ...knownProjects]) {
-                this.tree.get(dataName).known = true;
+                // Update tech tree
+                // NB: We only add completed techs/projects here, we don't reset those which were known before
+                for (const dataName of [...knownTechnologgies, ...knownProjects]) {
+                    this.tree.get(dataName).known = true;
+                }
+            } catch (err) {
+                console.error(err);
             }
         },
         open(url) {
