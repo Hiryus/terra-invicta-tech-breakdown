@@ -29,8 +29,8 @@ class Effects {
     async load() {
         // Fetch data
         const [templates, transaltions] = await Promise.all([
-            Parser.loadTemplates('game/TIEffectTemplate.json'),
-            Parser.loadTranslations('game/TIEffectTemplate.en'),
+            Parser.loadTemplates('TIEffectTemplate'),
+            Parser.loadTranslations('TIEffectTemplate'),
         ]);
 
         // Load template

@@ -18,6 +18,7 @@ const app = Vue.createApp({
         return {
             // Data
             effects: new Effects(),
+            modules: new Modules(),
             tree: new Tree(),
             // Filters
             loading: true,
@@ -29,8 +30,9 @@ const app = Vue.createApp({
     async created() {
         try {
             await Promise.all([
-                this.tree.load(),
                 this.effects.load(),
+                this.modules.load(),
+                this.tree.load(),
             ]);
             this.loading = false;
         } catch (err) {
@@ -59,18 +61,6 @@ const app = Vue.createApp({
                 return value;
             }
             return value.charAt(0).toUpperCase() + value.slice(1);
-        },
-        getDescription(project) {
-            if (project.description) {
-                return project.description.trim();
-            }
-            if (project.summary && project.summary.match(/<[a-z]+>/i)) {
-                return `Unlock module ${project.summary}.`;
-            }
-            if (project.summary) {
-                return project.summary.trim();
-            }
-            return null;
         },
         async loadSave() {
             try {

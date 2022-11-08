@@ -15,6 +15,12 @@ ul {
 h1, h2, h3 {
     margin: 0px;
 }
+a {
+    color:rgb(255, 253, 133);
+}
+a:hover {
+    text-decoration: none;
+}
 
 header {
     display: flex;

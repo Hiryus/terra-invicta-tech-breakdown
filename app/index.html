@@ -41,8 +41,16 @@
                         </h2>
                         <div v-if="project.show" class="content">
                             <div class="description">
-                                <h3>Description:</h3>
-                                {{getDescription(project)}}
+                                <div v-if="project.description && project.description.length > 0">
+                                    <h3>Description:</h3>
+                                    {{project.description.trim()}}
+                                </div>
+                                <div v-if="modules.getProjectModules(project.dataName).length > 0">
+                                    <h3>Unlock module(s):</h3>
+                                    <ul v-for="module in modules.getProjectModules(project.dataName)" :key="module.dataName">
+                                        <li>{{module.displayName || module.friendlyName}} (<a :href="module.wiki" target="_blank">wiki</a>)</li>
+                                    </ul>
+                                </div>
                                 <div v-if="project.effects.length > 0">
                                     <h3>Effects:</h3>
                                     <ul v-for="dataName in project.effects">
@@ -77,6 +85,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/parser.js"></script>
     <script src="js/effects.js"></script>
+    <script src="js/modules.js"></script>
     <script src="js/tree.js"></script>
     <script src="js/vue.js"></script>
 </body>

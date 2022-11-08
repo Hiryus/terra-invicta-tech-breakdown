@@ -86,10 +86,10 @@ class Tree {
     async load() {
         // Fetch data
         const [projectTemplate, technologyTemplate, projectTranslation, technologyTranslation] = await Promise.all([
-            Parser.loadTemplates('game/TIProjectTemplate.json'),
-            Parser.loadTemplates('game/TITechTemplate.json'),
-            Parser.loadTranslations('game/TIProjectTemplate.en'),
-            Parser.loadTranslations('game/TITechTemplate.en'),
+            Parser.loadTemplates('TIProjectTemplate'),
+            Parser.loadTemplates('TITechTemplate'),
+            Parser.loadTranslations('TIProjectTemplate'),
+            Parser.loadTranslations('TITechTemplate'),
         ]);
 
         // Load templates

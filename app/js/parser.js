@@ -1,7 +1,7 @@
 class Parser {
-    static async loadTranslations(url) {
+    static async loadTranslations(filenmae) {
         // Fetch data
-        const response = await fetch(url);
+        const response = await fetch(`game/localization/${filenmae}.en`);
         const data = await response.text();
 
         // Parse data line by line
@@ -11,8 +11,8 @@ class Parser {
             .map(([_, type, key, value]) => ({ type, key, value: value.trim() }));
     }
 
-    static async loadTemplates(url) {
-        const response = await fetch(url);
+    static async loadTemplates(filenmae) {
+        const response = await fetch(`game/templates/${filenmae}.json`);
         return await response.json();
     }
 }
