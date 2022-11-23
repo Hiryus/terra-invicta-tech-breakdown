@@ -1,11 +1,8 @@
-@media (min-width: 768px) {
-    body {
-        padding: 0 10vw;
-    }
-}
 body {
     background-color: rgb(47, 49, 54);
     color: rgb(230, 230, 230);
+    margin: 5px;
+    padding: 0px;
 }
 ul {
     list-style: none;
@@ -20,6 +17,18 @@ a {
 }
 a:hover {
     text-decoration: none;
+}
+
+#app {
+    display: flex;
+}
+.left_panel {
+    margin: 5px;
+    width: 60%;
+}
+.right_panel {
+    margin: 5px;
+    width: 40%;
 }
 
 header {
@@ -46,7 +55,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
+    padding: 0px;
 }
 
 .card {
@@ -58,7 +67,6 @@ header {
     padding: 0px 10px 10px 10px;
 }
 .card h2 {
-    cursor: pointer;
     display: flex;
     font-size: 110%;
     font-weight: bold;
@@ -67,12 +75,24 @@ header {
 .card h2 img {
     margin-right: 10px;
 }
+.card h2 .name {
+    cursor: pointer;
+    flex-grow: 10;
+}
+.card h2 a {
+    cursor: pointer;
+}
 .card h3 {
     font-size: 1.1em;
     margin-top: 10px;
 }
+.card .pin_btn {
+    margin-left: 10px;
+    position: relative;
+    text-align: right;
+    top: -2px;
+}
 .card .points {
-    flex-grow: 10;
     text-align: right;
 }
 .card > .content {
@@ -89,6 +109,37 @@ header {
     margin-right: 5px;
     margin-top: 3px;
     padding: 3px 5px;
+}
+
+.right_panel {
+    background-color: rgb(28, 45, 55);
+    margin-top: 31px;
+}
+.right_panel h1 {
+    background-color: rgba(0, 0, 0, .20);
+    border-bottom: 2px solid rgb(28, 45, 55);
+    cursor: pointer;
+    font-size: 120%;
+    padding: 5px;
+    text-align: center;
+}
+.right_panel > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.dragged {
+    opacity: 0.33;
+}
+.drop_shadow {
+    background-color: rgba(255, 255, 255, .1);
+    border: 2px dashed grey;
+    height: 100px;
+    margin: 5px;
+}
+.drop_ghost {
+    height: 100px;
+    margin: 5px;
 }
 
 .available {

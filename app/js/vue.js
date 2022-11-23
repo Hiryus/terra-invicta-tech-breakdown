@@ -23,7 +23,12 @@ const app = Vue.createApp({
             // Filters
             loading: true,
             opened: [],
+            pinned: [],
             search: '',
+            // Drag and drop
+            draggedName: null,
+            showShadow: false,
+            shadowIndex: 0,
         };
     },
 
@@ -47,6 +52,9 @@ const app = Vue.createApp({
                 .reduce((roles, tech) => roles.add(tech.role), new Set());
             return Array.from(roles).sort();
         },
+        pinnedTechnologies() {
+            return this.pinned.map(x => this.tree.get(x));
+        },
         technologies() {
             if (this.search.length < 3) {
                 return Object.values(this.tree.data);
@@ -61,6 +69,32 @@ const app = Vue.createApp({
                 return value;
             }
             return value.charAt(0).toUpperCase() + value.slice(1);
+        },
+        dragsendHandler(ev) {
+            this.draggedName = null;
+            this.showShadow = false;
+        },
+        dragstartHandler(ev, dataName) {
+            this.draggedName = dataName;
+            ev.dataTransfer.setData("application/tech-data-name", dataName);
+            console.log("drag", dataName);
+        },
+        dragoverHandler(ev, position) {
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect = "move";
+            this.showShadow = true;
+            this.shadowIndex = position;
+        },
+        dropHandler(ev) {
+            ev.preventDefault();
+            const dataName = ev.dataTransfer.getData("application/tech-data-name");
+
+            const fromIndex = this.pinned.indexOf(dataName);
+            const toIndex = (this.shadowIndex > fromIndex) ? this.shadowIndex - 1 : this.shadowIndex;
+            console.log("drop", dataName, fromIndex, toIndex);
+
+            this.pinned.splice(fromIndex, 1);
+            this.pinned.splice(toIndex, 0, dataName);
         },
         async loadSave() {
             try {
@@ -88,6 +122,9 @@ const app = Vue.createApp({
         open(url) {
             window.open(url, '_blank').focus();
         },
+        pin(dataName) {
+            this.pinned.push(dataName);
+        },
         techByRole(role) {
             return this.technologies
                 .filter(x => x.role === role)
@@ -100,6 +137,9 @@ const app = Vue.createApp({
             } else {
                 this.opened.push(role);
             }
+        },
+        unpin(dataName) {
+            this.pinned = this.pinned.filter((x) => x !== dataName);
         },
     }
 });
