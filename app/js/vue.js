@@ -23,8 +23,10 @@ const app = Vue.createApp({
             // Filters
             loading: true,
             opened: [],
-            pinned: [],
             search: '',
+            pinned: [],
+            description: false,
+            requirements: true,
             // Drag and drop
             draggedName: null,
             showShadow: false,
@@ -77,13 +79,13 @@ const app = Vue.createApp({
         dragstartHandler(ev, dataName) {
             this.draggedName = dataName;
             ev.dataTransfer.setData("application/tech-data-name", dataName);
-            console.log("drag", dataName);
         },
         dragoverHandler(ev, position) {
             ev.preventDefault();
             ev.dataTransfer.dropEffect = "move";
-            this.showShadow = true;
+
             this.shadowIndex = position;
+            this.showShadow = true;
         },
         dropHandler(ev) {
             ev.preventDefault();
@@ -91,7 +93,6 @@ const app = Vue.createApp({
 
             const fromIndex = this.pinned.indexOf(dataName);
             const toIndex = (this.shadowIndex > fromIndex) ? this.shadowIndex - 1 : this.shadowIndex;
-            console.log("drop", dataName, fromIndex, toIndex);
 
             this.pinned.splice(fromIndex, 1);
             this.pinned.splice(toIndex, 0, dataName);

@@ -83,6 +83,16 @@
             </ul>
         </div>
         <div v-if="!loading" class="right_panel" @drop="dropHandler">
+            <header>
+                <span>
+                    <input type="checkbox" v-model="description" id="description_cb" name="description" checked>
+                    <label for="description_cb">Description</label>
+                </span>
+                <span>
+                    <input type="checkbox" v-model="requirements" id="requirements_cb" name="requirements" checked>
+                    <label for="requirements_cb">Requirements</label>
+                </span>
+            </header>
             <h1>Pinned</h1>
             <ul>
                 <li v-show="showShadow" class="drop_shadow" :style="`order: ${shadowIndex}`" @dragover="ev => dragoverHandler(ev, shadowIndex)"></li>
@@ -102,8 +112,8 @@
                         <span class="points">{{Intl.NumberFormat().format(tree.getMissingScience(project.dataName))}}</span>
                         <a class="pin_btn" @click.left.prevent="unpin(project.dataName)">🎯</a>
                     </h2>
-                    <div class="content">
-                        <div class="description">
+                    <div class="content" v-if="description || requirements">
+                        <div class="description" v-if="description">
                             <div v-if="project.description && project.description.length > 0">
                                 <h3>Description:</h3>
                                 {{project.description.trim()}}
@@ -127,7 +137,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div v-if="project.prereqs.length > 0" class="requirements">
+                        <div v-if="requirements && (project.prereqs.length > 0)" class="requirements">
                             <h3>Requirements:</h3>
                             <ul>
                                 <li v-for="req in tree.getAllRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = !tree.get(req).known">
