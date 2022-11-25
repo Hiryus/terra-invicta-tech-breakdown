@@ -42,6 +42,7 @@ const app = Vue.createApp({
                 this.tree.load(),
             ]);
             this.loading = false;
+            this.loadPinned();
         } catch (err) {
             console.error(err);
         }
@@ -96,6 +97,13 @@ const app = Vue.createApp({
 
             this.pinned.splice(fromIndex, 1);
             this.pinned.splice(toIndex, 0, dataName);
+            this.savePinned();
+        },
+        loadPinned() {
+            const data = localStorage.getItem('pinned');
+            if (data) {
+                this.pinned = JSON.parse(data);
+            }
         },
         async loadSave() {
             try {
@@ -125,6 +133,11 @@ const app = Vue.createApp({
         },
         pin(dataName) {
             this.pinned.push(dataName);
+            this.savePinned();
+        },
+        savePinned() {
+            const data = JSON.stringify(this.pinned);
+            localStorage.setItem('pinned', data);
         },
         techByRole(role) {
             return this.technologies
