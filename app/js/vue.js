@@ -154,6 +154,7 @@ const app = Vue.createApp({
         },
         unpin(dataName) {
             this.pinned = this.pinned.filter((x) => x !== dataName);
+            this.savePinned();
         },
     }
 });
