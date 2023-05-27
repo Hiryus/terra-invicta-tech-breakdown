@@ -10,8 +10,8 @@ class Tree {
         this.data[source.dataName].role = (type === 'project') ? source.AI_projectRole : source.AI_techRole;
 
         // Clean up empty values in arrays
-        this.data[source.dataName].effects = source.effects.filter(x => typeof x === 'string' && x.length > 0);
-        this.data[source.dataName].prereqs = source.prereqs.filter(x => typeof x === 'string' && x.length > 0);
+        this.data[source.dataName].effects = source.effects ? source.effects.filter(x => typeof x === 'string' && x.length > 0) : [];
+        this.data[source.dataName].prereqs = source.prereqs ? source.prereqs.filter(x => typeof x === 'string' && x.length > 0) : [];
         this.data[source.dataName].resourcesGranted = source.resourcesGranted
             ? source.resourcesGranted.filter(x => typeof x.resource === 'string' && x.resource.length > 0)
             : [];
