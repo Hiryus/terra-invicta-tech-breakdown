@@ -30,15 +30,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.4,
-      "metals": 0.2,
-      "nobleMetals": null,
+      "volatiles": 0.69,
+      "metals": 0.3,
+      "nobleMetals": 0.01,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -82,15 +83,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.1,
-      "metals": 0.1,
-      "nobleMetals": null,
+      "volatiles": 0.68,
+      "metals": 0.3,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -134,15 +136,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.45,
-      "metals": 0.15,
-      "nobleMetals": null,
+      "volatiles": 0.68,
+      "metals": 0.3,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -176,7 +179,7 @@
    "warheadMass_kg": 50,
    "flatDamage_MJ": null,
    "warheadClass": "Fragmentation",
-   "acceleration_g": 7.5,
+   "acceleration_g": 4.5,
    "EV_kps": 3.23,
    "deltaV_kps": 3.43,
    "thrustRamp_s": 3,
@@ -186,15 +189,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.15,
-      "metals": 0.045,
-      "nobleMetals": 0.005,
+      "volatiles": 0.65,
+      "metals": 0.33,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -228,7 +232,7 @@
    "warheadMass_kg": 100,
    "flatDamage_MJ": null,
    "warheadClass": "Fragmentation",
-   "acceleration_g": 5.25,
+   "acceleration_g": 4.25,
    "EV_kps": 3.23,
    "deltaV_kps": 3.89,
    "thrustRamp_s": 3,
@@ -238,15 +242,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.5,
-      "metals": 0.09,
-      "nobleMetals": 0.01,
+      "volatiles": 0.65,
+      "metals": 0.33,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -290,15 +295,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.15,
-      "metals": 0.025,
-      "nobleMetals": 0.025,
+      "volatiles": 0.65,
+      "metals": 0.33,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -342,15 +348,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 1.5,
-      "metals": 0.05,
-      "nobleMetals": 0.05,
+      "volatiles": 0.65,
+      "metals": 0.33,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -394,15 +401,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 2.25,
-      "metals": 0.15,
-      "nobleMetals": null,
+      "volatiles": 0.65,
+      "metals": 0.32,
+      "nobleMetals": 0.03,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -436,7 +444,7 @@
    "warheadMass_kg": 50,
    "flatDamage_MJ": null,
    "warheadClass": "Fragmentation",
-   "acceleration_g": 5.25,
+   "acceleration_g": 4,
    "EV_kps": 4.45,
    "deltaV_kps": 5.99,
    "thrustRamp_s": 3,
@@ -446,15 +454,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 2.35,
-      "metals": 0.045,
-      "nobleMetals": 0.005,
+      "volatiles": 0.65,
+      "metals": 0.32,
+      "nobleMetals": 0.03,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -498,15 +507,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 2.2,
-      "metals": 0.15,
-      "nobleMetals": 0.05,
+      "volatiles": 0.65,
+      "metals": 0.32,
+      "nobleMetals": 0.03,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -550,15 +560,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.85,
-      "metals": 0.15,
-      "nobleMetals": null,
+      "volatiles": 0.68,
+      "metals": 0.3,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -602,15 +613,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.85,
-      "metals": 0.075,
-      "nobleMetals": 0.075,
+      "volatiles": 0.68,
+      "metals": 0.3,
+      "nobleMetals": 0.02,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -654,15 +666,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.75,
-      "metals": 0.25,
-      "nobleMetals": null,
+      "volatiles": 0.65,
+      "metals": 0.32,
+      "nobleMetals": 0.03,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -706,15 +719,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.75,
-      "metals": 0.125,
-      "nobleMetals": 0.125,
+      "volatiles": 0.65,
+      "metals": 0.32,
+      "nobleMetals": 0.03,
       "fissiles": null,
       "antimatter": null,
       "exotics": ""
@@ -758,15 +772,16 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.75,
-      "metals": 0.25,
-      "nobleMetals": null,
+      "volatiles": 0.6,
+      "metals": 0.29,
+      "nobleMetals": 0.1,
       "fissiles": 0.01,
       "antimatter": null,
       "exotics": ""
@@ -810,14 +825,15 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
       "nobleMetals": null
    },
    "ammoMaterials": {
-      "volatiles": 0.8,
-      "metals": 0.1,
+      "volatiles": 0.6,
+      "metals": 0.29,
       "nobleMetals": 0.1,
       "fissiles": 0.01,
       "antimatter": null,
@@ -862,15 +878,16 @@
    "bombardmentValue": 50,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.4,
       "metals": 0.4,
       "nobleMetals": 0.2
    },
    "ammoMaterials": {
-      "volatiles": 0.7,
-      "metals": 0.15,
-      "nobleMetals": 0.15,
+      "volatiles": 0.65,
+      "metals": 0.278,
+      "nobleMetals": 0.07,
       "fissiles": 0.002,
       "antimatter": null,
       "exotics": ""
@@ -881,7 +898,7 @@
    "impactVisualFXResource": "spaceCombat/SpaceNuke",
    "fireSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Torpedo_Launch",
    "impactSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Nuclear_Warhead_Detonates",
-   "notes": "300 KT (B61)"
+   "notes": "300 KT (B61) * Hypergolic"
 },
  {
    "dataName": "HadesNuclearTorpedoBay",
@@ -914,16 +931,17 @@
    "bombardmentValue": 100,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.4,
       "metals": 0.4,
       "nobleMetals": 0.2
    },
    "ammoMaterials": {
-      "volatiles": 0.6,
-      "metals": 0.2,
-      "nobleMetals": 0.2,
-      "fissiles": 0.0025,
+      "volatiles": 0.62,
+      "metals": 0.298,
+      "nobleMetals": 0.08,
+      "fissiles": 0.002,
       "antimatter": null,
       "exotics": ""
    },
@@ -933,7 +951,7 @@
    "impactVisualFXResource": "spaceCombat/SpaceNuke",
    "fireSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Torpedo_Launch",
    "impactSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Nuclear_Warhead_Detonates",
-   "notes": "600 KT"
+   "notes": "600 KT * Hydrolox"
 },
  {
    "dataName": "NemesisNuclearTorpedoBay",
@@ -966,15 +984,16 @@
    "bombardmentValue": 500,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.4,
       "metals": 0.4,
       "nobleMetals": 0.2
    },
    "ammoMaterials": {
-      "volatiles": 0.45,
-      "metals": 0.275,
-      "nobleMetals": 0.275,
+      "volatiles": 0.52,
+      "metals": 0.29,
+      "nobleMetals": 0.18,
       "fissiles": 0.01,
       "antimatter": null,
       "exotics": ""
@@ -985,7 +1004,7 @@
    "impactVisualFXResource": "spaceCombat/SpaceNuke",
    "fireSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Torpedo_Launch",
    "impactSoundFXResource": "event:/SFX/Game_SFX/Guns/trig_SFX_Nuclear_Warhead_Detonates",
-   "notes": "1.2 KT"
+   "notes": "1.2 KT * NTR"
 },
  {
    "dataName": "OlympusNuclearTorpedoBay",
@@ -1018,15 +1037,16 @@
    "bombardmentValue": 500,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.4,
       "metals": 0.4,
       "nobleMetals": 0.2
    },
    "ammoMaterials": {
-      "volatiles": 0.7,
-      "metals": 0.15,
-      "nobleMetals": 0.15,
+      "volatiles": 0.51,
+      "metals": 0.29,
+      "nobleMetals": 0.18,
       "fissiles": 0.02,
       "antimatter": null,
       "exotics": ""
@@ -1070,15 +1090,16 @@
    "bombardmentValue": 1000,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.4,
       "metals": 0.4,
       "nobleMetals": 0.2
    },
    "ammoMaterials": {
-      "volatiles": 0.65,
-      "metals": 0.15,
-      "nobleMetals": 0.2,
+      "volatiles": 0.51,
+      "metals": 0.299975,
+      "nobleMetals": 0.18,
       "fissiles": 0.01,
       "antimatter": 0.000025,
       "exotics": ""
@@ -1122,6 +1143,7 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
@@ -1174,6 +1196,7 @@
    "bombardmentValue": 0,
    "targetingRange_km": 1000,
    "pivotRange_deg": 180,
+   "isPointDefenseTargetable": true,
    "weightedBuildMaterials": {
       "volatiles": 0.5,
       "metals": 0.5,
