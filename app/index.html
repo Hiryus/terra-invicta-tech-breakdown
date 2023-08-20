@@ -43,9 +43,9 @@
                             </h2>
                             <div v-if="project.show" class="content">
                                 <div class="description">
-                                    <div v-if="project.description && project.description.length > 0">
+                                    <div v-if="project.description || project.summary">
                                         <h3>Description:</h3>
-                                        {{project.description.trim()}}
+                                        {{project.description || project.summary}}
                                     </div>
                                     <div v-if="modules.getProjectModules(project.dataName).length > 0">
                                         <h3>Unlock module(s):</h3>
@@ -114,9 +114,9 @@
                     </h2>
                     <div class="content" v-if="description || requirements">
                         <div class="description" v-if="description">
-                            <div v-if="project.description && project.description.length > 0">
+                            <div v-if="project.description || project.summary">
                                 <h3>Description:</h3>
-                                {{project.description.trim()}}
+                                {{project.description || project.summary}}
                             </div>
                             <div v-if="modules.getProjectModules(project.dataName).length > 0">
                                 <h3>Unlock module(s):</h3>
