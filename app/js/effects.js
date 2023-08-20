@@ -15,12 +15,15 @@ class Effects {
         if (typeof effect.description !== 'string' || effect.description.length < 1) {
             return effect.displayName || `${dataName} (no info)`;
         }
+        if (effect.description.includes('{1}'))
+            console.log(effect)
         return effect.description
             .replace(/^-/, '') // remove leading dash if any
             .replace('{0}', effect.value)
             .replace('{3}', `${effect.value * 100}%`)
             .replace('{4}', `${100 - effect.value * 100}%`)
             .replace('{8}', `${Math.round((effect.value - 1) * 100)}%`)
+            .replace('{13}', effect.strValue)
             .replace('{14}', '[your faction]')
             .replace('{18}', `${(1 - effect.value) * 100}%`)
             .replace('{19}', Math.abs(effect.value));
@@ -29,8 +32,8 @@ class Effects {
     async load() {
         // Fetch data
         const [templates, transaltions] = await Promise.all([
-            Parser.loadTemplates('TIEffectTemplate'),
-            Parser.loadTranslations('TIEffectTemplate'),
+            Parser.loadTemplateFile('TIEffectTemplate'),
+            Parser.loadLocalizationFile('TIEffectTemplate'),
         ]);
 
         // Load template

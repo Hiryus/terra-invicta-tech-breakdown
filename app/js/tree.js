@@ -1,3 +1,26 @@
+// List of available translation files without ".en" suffix
+const TRANSLATION_FILES = [
+    'TIBatteryTemplate',
+    'TIPlasmaWeaponTemplate',
+    'TIDriveTemplate',
+    'TIPowerPlantTemplate',
+    'TIEffectTemplate',
+    'TIProjectTemplate',
+    'TIGunTemplate',
+    'TIRadiatorTemplate',
+    'TIHabModuleTemplate',
+    'TIShipArmorTemplate',
+    'TIHeatSinkTemplate',
+    'TIShipCommandTemplate',
+    'TILaserWeaponTemplate',
+    'TIShipHullTemplate',
+    'TIMagneticGunTemplate',
+    'TITechTemplate',
+    'TIMissileTemplate',
+    'TIUtilityModuleTemplate',
+    'TIParticleWeaponTemplate',
+];
+
 class Tree {
     constructor() {
         this.data = {};
@@ -15,6 +38,15 @@ class Tree {
         this.data[source.dataName].resourcesGranted = source.resourcesGranted
             ? source.resourcesGranted.filter(x => typeof x.resource === 'string' && x.resource.length > 0)
             : [];
+    }
+
+    addTranslation(type, key, value) {
+        if (key in this.data) {
+            this.data[key][type] = value;
+        }
+        if (`Project_${key}` in this.data) {
+            this.data[`Project_${key}`][type] = value;
+        }
     }
 
     get(dataName) {
@@ -84,27 +116,16 @@ class Tree {
     }
 
     async load() {
-        // Fetch data
-        const [projectTemplate, technologyTemplate, projectTranslation, technologyTranslation] = await Promise.all([
-            Parser.loadTemplates('TIProjectTemplate'),
-            Parser.loadTemplates('TITechTemplate'),
-            Parser.loadTranslations('TIProjectTemplate'),
-            Parser.loadTranslations('TITechTemplate'),
+        // Load templates
+        await Promise.all([
+            (await Parser.loadTemplateFile('TIProjectTemplate')).forEach((value) => this.addTechnology(value, 'project')),
+            (await Parser.loadTemplateFile('TITechTemplate')).forEach((value) => this.addTechnology(value, 'technology')),
         ]);
 
-        // Load templates
-        for (const project of projectTemplate) {
-            this.addTechnology(project, 'project');
-        }
-        for (const technology of technologyTemplate) {
-            this.addTechnology(technology, 'technology');
-        }
-
         // Load translations
-        for (const { type, key, value } of [...projectTranslation, ...technologyTranslation]) {
-            if (key in this.data) {
-                this.data[key][type] = value;
-            }
-        }
+        const transaltions = await Promise.all(
+            TRANSLATION_FILES.map(Parser.loadLocalizationFile)
+        );
+        transaltions.flat().forEach(({ type, key, value }) => this.addTranslation(type, key, value));
     }
 }
