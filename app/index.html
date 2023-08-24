@@ -89,8 +89,12 @@
                     <label for="description_cb">Description</label>
                 </span>
                 <span>
-                    <input type="checkbox" v-model="requirements" id="requirements_cb" name="requirements" checked>
-                    <label for="requirements_cb">Requirements</label>
+                    <input type="checkbox" v-model="unknown_requirements" id="unknown_requirements_cb" name="unknown_requirements" checked>
+                    <label for="unknown_requirements_cb">Unknown requirements</label>
+                </span>
+                <span>
+                    <input type="checkbox" v-model="known_requirements" id="known_requirements_cb" name="known_requirements" checked>
+                    <label for="known_requirements_cb">Known requirements</label>
                 </span>
             </header>
             <h1>Pinned</h1>
@@ -112,7 +116,7 @@
                         <span class="points">{{Intl.NumberFormat().format(tree.getMissingScience(project.dataName))}}</span>
                         <a class="pin_btn" @click.left.prevent="unpin(project.dataName)">🎯</a>
                     </h2>
-                    <div class="content" v-if="description || requirements">
+                    <div class="content" v-if="description || (known_requirements && tree.hasKnownRequirements(project.dataName)) || (unknown_requirements && tree.hasUnknownRequirements(project.dataName))">
                         <div class="description" v-if="description">
                             <div v-if="project.description || project.summary">
                                 <h3>Description:</h3>
@@ -137,10 +141,15 @@
                                 </ul>
                             </div>
                         </div>
-                        <div v-if="requirements && (project.prereqs.length > 0)" class="requirements">
+                        <div v-if="(known_requirements && tree.hasKnownRequirements(project.dataName)) || (unknown_requirements && tree.hasUnknownRequirements(project.dataName))" class="requirements">
                             <h3>Requirements:</h3>
                             <ul>
-                                <li v-for="req in tree.getAllRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = !tree.get(req).known">
+                                <li v-for="req in tree.getKnownRequirements(project.dataName)" :class="'known'" @click.right.prevent="tree.get(req).known = false">
+                                    <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
+                                    <img v-if="tree.get(req).type === 'technology'" src="img/science.svg" height="12">
+                                    {{tree.get(req).displayName || tree.get(req).friendlyName}}
+                                </li>
+                                <li v-for="req in tree.getUnknownRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = true">
                                     <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
                                     <img v-if="tree.get(req).type === 'technology'" src="img/science.svg" height="12">
                                     {{tree.get(req).displayName || tree.get(req).friendlyName}}

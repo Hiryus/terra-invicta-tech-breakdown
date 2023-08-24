@@ -26,7 +26,8 @@ const app = Vue.createApp({
             search: '',
             pinned: [],
             description: false,
-            requirements: true,
+            known_requirements: false,
+            unknown_requirements: true,
             // Drag and drop
             draggedName: null,
             showShadow: false,
@@ -63,7 +64,7 @@ const app = Vue.createApp({
                 return Object.values(this.tree.data);
             }
             return Object.values(this.tree.data).filter(x => typeof x.displayName === 'string' && x.displayName.toLowerCase().includes(this.search.toLowerCase()));
-        }
+        },
     },
 
     methods: {
