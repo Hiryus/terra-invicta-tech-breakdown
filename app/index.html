@@ -144,12 +144,12 @@
                         <div v-if="(known_requirements && tree.hasKnownRequirements(project.dataName)) || (unknown_requirements && tree.hasUnknownRequirements(project.dataName))" class="requirements">
                             <h3>Requirements:</h3>
                             <ul>
-                                <li v-for="req in tree.getKnownRequirements(project.dataName)" :class="'known'" @click.right.prevent="tree.get(req).known = false">
+                                <li v-if="known_requirements" v-for="req in tree.getKnownRequirements(project.dataName)" class="known" @click.right.prevent="tree.get(req).known = false">
                                     <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
                                     <img v-if="tree.get(req).type === 'technology'" src="img/science.svg" height="12">
                                     {{tree.get(req).displayName || tree.get(req).friendlyName}}
                                 </li>
-                                <li v-for="req in tree.getUnknownRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = true">
+                                <li v-if="unknown_requirements" v-for="req in tree.getUnknownRequirements(project.dataName)" :class="tree.getStatus(req)" @click.right.prevent="tree.get(req).known = true">
                                     <img v-if="tree.get(req).type === 'project'" src="img/project.svg" height="12">
                                     <img v-if="tree.get(req).type === 'technology'" src="img/science.svg" height="12">
                                     {{tree.get(req).displayName || tree.get(req).friendlyName}}

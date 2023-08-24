@@ -74,46 +74,40 @@ class Tree {
      * Return the list of requirements (dataNames) to unlock given technology which are already known.
      */
     getKnownRequirements(dataName) {
-        const tech = this.get(dataName);
-        // List all met requirements recursively
-        const requirements = tech.prereqs.reduce((list, prereqName) => {
-            if (this.getStatus(prereqName) === "known") {
-                list.push(prereqName, ...this.getKnownRequirements(prereqName));
-            }
-            return list;
-        }, []);
-        // Deduplicate and sort
-        return Array.from(new Set(requirements)).sort((a, b) => this.getLevel(a) - this.getLevel(b));
+        return this.getAllRequirements(dataName)
+            .filter((prereqName) => this.getStatus(prereqName) === "known");
     }
 
     /**
      * Return the list of requirements (dataNames) to unlock given technology which are already known.
      */
     getUnknownRequirements(dataName) {
-        const tech = this.get(dataName);
-        // List all met requirements recursively
-        const requirements = tech.prereqs.reduce((list, prereqName) => {
-            if (this.getStatus(prereqName) !== "known") {
-                list.push(prereqName, ...this.getUnknownRequirements(prereqName));
-            }
-            return list;
-        }, []);
-        // Deduplicate and sort
-        return Array.from(new Set(requirements)).sort((a, b) => this.getLevel(a) - this.getLevel(b));
+        return this.getAllRequirements(dataName)
+            .filter((prereqName) => this.getStatus(prereqName) !== "known");
     }
 
     /**
      * Return true if any requirement of the given technhology is already known.
      */
     hasKnownRequirements(dataName) {
-        return this.get(dataName).prereqs.some((prereqName) => this.getStatus(prereqName) === "known");
+        return this.get(dataName).prereqs.some((prereqName) => {
+            if (this.getStatus(prereqName) === "known") {
+                return true;
+            }
+            return this.hasKnownRequirements(prereqName);
+        });
     }
 
     /**
      * Return true if any requirement of the given technhology is NOT known.
      */
     hasUnknownRequirements(dataName) {
-        return this.get(dataName).prereqs.some((prereqName) => this.getStatus(prereqName) !== "known");
+        return this.get(dataName).prereqs.some((prereqName) => {
+            if (this.getStatus(prereqName) !== "known") {
+                return true;
+            }
+            return this.hasKnownRequirements(prereqName);
+        });
     }
 
     /**
