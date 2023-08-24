@@ -106,7 +106,7 @@ class Tree {
             if (this.getStatus(prereqName) !== "known") {
                 return true;
             }
-            return this.hasKnownRequirements(prereqName);
+            return this.hasUnknownRequirements(prereqName);
         });
     }
 
