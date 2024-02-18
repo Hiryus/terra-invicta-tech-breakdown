@@ -17,6 +17,26 @@
    "resourcesGranted": []
 },
  {
+   "friendlyName": "Alien Advanced Master Project",
+   "dataName": "Project_AlienAdvancedMasterProject",
+   "techCategory": "Xenology",
+   "AI_techRole": "None",
+   "researchCost": -1,
+   "prereqs": [
+      "Project_AlienMasterProject"
+   ],
+   "oneTimeGlobally": false,
+   "repeatable": false,
+   "factionPrereq": [
+      "AlienCouncil"
+   ],
+   "factionAvailableChance": 100,
+   "initialUnlockChance": 100,
+   "deltaUnlockChance": 100,
+   "maxUnlockChance": 100,
+   "resourcesGranted": []
+},
+ {
    "friendlyName": "Their Signatures",
    "dataName": "Project_TheirSignatures",
    "techCategory": "Xenology",
@@ -310,7 +330,8 @@
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
-   "researchCost": 2500,
+   "AI_criticalTech": true,
+   "researchCost": 10000,
    "prereqs": [
       "Project_HydraDiplomacy"
    ],
@@ -554,6 +575,7 @@
    "friendlyName": "AppeaseVictory",
    "dataName": "Project_AppeaseVictory",
    "techCategory": "Xenology",
+   "AI_criticalTech": true,  
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
    "researchCost": 2500,
@@ -586,6 +608,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
+   "AI_criticalTech": true,  
    "researchCost": 25000,
    "prereqs": [
       "Project_TheirOperations"
@@ -616,7 +639,8 @@
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
-   "researchCost": 2000,
+   "AI_criticalTech": true,
+   "researchCost": 2500,
    "prereqs": [
       "Project_TheirMethods"
    ],
@@ -646,6 +670,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
+   "AI_criticalTech": true,  
    "researchCost": 5000,
    "prereqs": [
       "Project_TheirOrigin"
@@ -675,6 +700,7 @@
    "dataName": "Project_ExploitVictory",
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
+   "AI_criticalTech": true,
    "AI_projectRole": "Objective",
    "researchCost": 2500,
    "prereqs": [
@@ -705,6 +731,7 @@
    "dataName": "Project_ResistVictory",
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Objective",
    "researchCost": 2500,
    "prereqs": [
@@ -736,7 +763,8 @@
    "techCategory": "Xenology",
    "AI_techRole": "FactionObjective",
    "AI_projectRole": "Objective",
-   "researchCost": 2000,
+   "AI_criticalTech": true,   
+   "researchCost": 2500,
    "prereqs": [
       "Project_TheirMethods"
    ],
@@ -2765,7 +2793,7 @@
    "techCategory": "MilitaryScience",
    "AI_techRole": "SpaceWar",
    "AI_criticalTech": true,
-   "AI_projectRole": "Fleet",
+   "AI_projectRole": "Core",
    "researchCost": 250,
    "prereqs": [
       "OrbitalShipbuilding"
@@ -3148,7 +3176,8 @@
    "researchCost": 1000,
    "prereqs": [
       "OrbitalShipbuilding",
-      "AdvancedHydrogenContainment"
+      "AdvancedHydrogenContainment",
+      "Project_LiquidHydrogenContainment"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -3168,7 +3197,9 @@
    "prereqs": [
       "OrbitalShipbuilding",
       "AdvancedHydrogenContainment",
-      "AdvancedAtomicManipulation"
+      "AdvancedAtomicManipulation",
+      "Project_SlushHydrogenTankage",
+      "Project_ExoticHybridSystems"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -3716,6 +3747,26 @@
    "resourcesGranted": []
 },
  {
+   "friendlyName": "Heavy Fission Pile",
+   "dataName": "Project_HeavyFissionPile",
+   "techCategory": "Energy",
+   "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
+   "AI_projectRole": "HabInfrastructure",
+   "researchCost": 1000,
+   "prereqs": [
+      "GasCoreFissionSystems",
+      "Project_FissionPile"
+   ],
+   "oneTimeGlobally": false,
+   "repeatable": false,
+   "factionAvailableChance": 100,
+   "initialUnlockChance": 0,
+   "deltaUnlockChance": 6,
+   "maxUnlockChance": 100,
+   "resourcesGranted": []
+},
+ {
    "friendlyName": "Hydroponics Bay",
    "dataName": "Project_HydroponicsBay",
    "techCategory": "LifeScience",
@@ -3841,7 +3892,7 @@
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
    "AI_criticalTech": true,
-   "AI_projectRole": "HabInfrastructure",
+   "AI_projectRole": "Core",
    "researchCost": 300,
    "prereqs": [
       "OutpostHabs"
@@ -3863,7 +3914,7 @@
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
    "AI_criticalTech": true,
-   "AI_projectRole": "SpaceResources",
+   "AI_projectRole": "Core",
    "researchCost": 500,
    "prereqs": [
       "Project_OutpostCore",
@@ -3883,7 +3934,7 @@
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
    "AI_criticalTech": true,
-   "AI_projectRole": "HabInfrastructure",
+   "AI_projectRole": "Core",
    "researchCost": 100,
    "effects": [
       "Effect_CanFoundTier1Station"
@@ -3906,7 +3957,7 @@
    "researchCost": 300,
    "prereqs": [
       "Project_PlatformCore",
-      "PrinciplesofSpaceWarfare"
+      "InfraredCombatLasers"
    ],
    "altPrereq0": "Project_OutpostCore",
    "oneTimeGlobally": false,
@@ -3962,7 +4013,7 @@
    "techCategory": "Energy",
    "AI_techRole": "SpaceDevelopment",
    "AI_criticalTech": true,
-   "AI_projectRole": "HabInfrastructure",
+   "AI_projectRole": "Core",
    "researchCost": 100,
    "prereqs": [
       "Project_PlatformCore"
@@ -3982,7 +4033,7 @@
    "techCategory": "Materials",
    "AI_techRole": "SpaceDevelopment",
    "AI_criticalTech": true,
-   "AI_projectRole": "HabInfrastructure",
+   "AI_projectRole": "Core",
    "researchCost": 500,
    "prereqs": [
       "Project_PlatformCore",
@@ -4246,6 +4297,26 @@
    "factionAvailableChance": 100,
    "initialUnlockChance": 0,
    "deltaUnlockChance": 10,
+   "maxUnlockChance": 100,
+   "resourcesGranted": []
+},
+ {
+   "friendlyName": "Heavy Fission Reactor Array",
+   "dataName": "Project_HeavyFissionReactorArray",
+   "techCategory": "Energy",
+   "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
+   "AI_projectRole": "HabInfrastructure",
+   "researchCost": 3000,
+   "prereqs": [
+      "Project_HeavyFissionPile",
+      "Project_FissionReactorArray"
+   ],
+   "oneTimeGlobally": false,
+   "repeatable": false,
+   "factionAvailableChance": 100,
+   "initialUnlockChance": 0,
+   "deltaUnlockChance": 6,
    "maxUnlockChance": 100,
    "resourcesGranted": []
 },
@@ -4944,6 +5015,27 @@
    "factionAvailableChance": 100,
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
+   "maxUnlockChance": 100,
+   "resourcesGranted": []
+},
+ {
+   "friendlyName": "Heavy Fission Reactor Farm",
+   "dataName": "Project_HeavyFissionReactorFarm",
+   "techCategory": "Energy",
+   "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
+   "AI_projectRole": "HabInfrastructure",
+   "researchCost": 6500,
+   "prereqs": [
+      "AdvancedFissionSystems",
+      "Project_FissionReactorFarm",
+      "Project_HeavyFissionReactorArray"
+   ],
+   "oneTimeGlobally": false,
+   "repeatable": false,
+   "factionAvailableChance": 100,
+   "initialUnlockChance": 0,
+   "deltaUnlockChance": 6,
    "maxUnlockChance": 100,
    "resourcesGranted": []
 },
@@ -5834,7 +5926,7 @@
    "factionAvailableChance": 100,
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
-   "maxUnlockChance": 10,
+   "maxUnlockChance": 20,
    "resourcesGranted": []
 },
  {
@@ -5887,11 +5979,10 @@
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
-   "factionAvailableChance": 20,
-   "factionAlways": "EscapeCouncil",
+   "factionAvailableChance": 100,
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
-   "maxUnlockChance": 20,
+   "maxUnlockChance": 25,
    "resourcesGranted": []
 },
  {
@@ -5910,7 +6001,7 @@
    "factionAvailableChance": 100,
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
-   "maxUnlockChance": 10,
+   "maxUnlockChance": 25,
    "resourcesGranted": []
 },
  {
@@ -5927,9 +6018,10 @@
    "oneTimeGlobally": false,
    "repeatable": false,
    "factionAvailableChance": 15,
+   "factionAlways": "EscapeCouncil",
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
-   "maxUnlockChance": 15,
+   "maxUnlockChance": 25,
    "resourcesGranted": []
 },
  {
@@ -5945,7 +6037,8 @@
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
-   "factionAvailableChance": 100,
+   "factionAvailableChance": 50,
+   "factionAlways": "EscapeCouncil",
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
    "maxUnlockChance": 100,
@@ -6053,6 +6146,7 @@
    "friendlyName": "Firestar Drive",
    "dataName": "Project_FirestarDrive",
    "techCategory": "SpaceScience",
+   "AI_criticalTech": true,  
    "AI_techRole": "SpaceDevelopment",
    "AI_projectRole": "Propulsion",
    "researchCost": 20000,
@@ -6259,7 +6353,8 @@
    "AI_projectRole": "Propulsion",
    "researchCost": 5000,
    "prereqs": [
-      "Project_VortexDrive"
+      "Project_VortexDrive",
+      "Project_VaporCoreFissionReactorII"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -6291,6 +6386,8 @@
    "friendlyName": "Pegasus Drive",
    "dataName": "Project_PegasusDrive",
    "techCategory": "SpaceScience",
+   "AI_criticalTech": true,
+  
    "AI_techRole": "SpaceDevelopment",
    "AI_projectRole": "Propulsion",
    "researchCost": 10000,
@@ -6389,8 +6486,11 @@
    "AI_projectRole": "Propulsion",
    "researchCost": 8000,
    "prereqs": [
-      "Project_PulsarDrive"
+      "HighEnergyLasers",
+      "Project_PulsarDrive",
+      "Project_SolidCoreFissionReactorV"
    ],
+   "altPrereq0": "ParticleCannon",
    "oneTimeGlobally": false,
    "repeatable": false,
    "factionAvailableChance": 40,
@@ -6409,7 +6509,7 @@
    "researchCost": 2000,
    "prereqs": [
       "Project_NervaDrive",
-      "Project_SolidCoreFissionReactorII"
+      "Project_SolidCoreFissionReactorIII"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -6424,6 +6524,7 @@
    "dataName": "Project_HeavyDumbo",
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "Propulsion",
    "researchCost": 7000,
    "prereqs": [
@@ -6446,7 +6547,8 @@
    "AI_projectRole": "Propulsion",
    "researchCost": 2000,
    "prereqs": [
-      "Project_CermetNerva"
+      "Project_CermetNerva",
+      "Project_SolidCoreFissionReactorII"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -6902,7 +7004,7 @@
    "dataName": "Project_Solid-FuelSpaceRockets",
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
-   "AI_projectRole": "Boost",
+   "AI_projectRole": "Core",
    "researchCost": 100,
    "effects": [
       "Effect_SolidFuelRockets"
@@ -6963,6 +7065,7 @@
    "dataName": "Project_ImprovedInterplanetaryRockets",
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "Propulsion",
    "researchCost": 100,
    "prereqs": [
@@ -6986,6 +7089,7 @@
    "dataName": "Project_AdvancedInterplanetaryRockets",
    "techCategory": "SpaceScience",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "Propulsion",
    "researchCost": 200,
    "prereqs": [
@@ -7086,6 +7190,7 @@
    "dataName": "Project_SolidCoreFissionReactorII",
    "techCategory": "Energy",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "PowerPlant",
    "researchCost": 500,
    "prereqs": [
@@ -7104,6 +7209,7 @@
    "dataName": "Project_SolidCoreFissionReactorIII",
    "techCategory": "Energy",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "PowerPlant",
    "researchCost": 600,
    "prereqs": [
@@ -7122,6 +7228,7 @@
    "dataName": "Project_SolidCoreFissionReactorIV",
    "techCategory": "Energy",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "PowerPlant",
    "researchCost": 700,
    "prereqs": [
@@ -7140,6 +7247,7 @@
    "dataName": "Project_SolidCoreFissionReactorV",
    "techCategory": "Energy",
    "AI_techRole": "SpaceDevelopment",
+   "AI_criticalTech": true,
    "AI_projectRole": "PowerPlant",
    "researchCost": 800,
    "prereqs": [
@@ -7512,10 +7620,9 @@
    "AI_projectRole": "PowerPlant",
    "researchCost": 10000,
    "prereqs": [
-      "HydrogenLithium6Fusion",
+      "DeuteriumTritiumFusion",
       "ElectrostaticPlasmaConfinement"
    ],
-   "altPrereq0": "DeuteriumTritiumFusion",
    "oneTimeGlobally": false,
    "repeatable": false,
    "factionAvailableChance": 100,
@@ -8780,7 +8887,8 @@
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 800,
    "prereqs": [
-      "ParticleCannon"
+      "ParticleCannon",
+      "Project_PatrolVessels"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -8798,7 +8906,8 @@
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 1000,
    "prereqs": [
-      "ParticleCannon"
+      "ParticleCannon",
+      "Project_FleetCombatants"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -8816,7 +8925,8 @@
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 1200,
    "prereqs": [
-      "ParticleCannon"
+      "ParticleCannon",
+      "Project_PatrolVessels"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -8834,7 +8944,8 @@
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 1200,
    "prereqs": [
-      "ParticleCannon"
+      "ParticleCannon",
+      "Project_ShipsoftheLine"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -9812,7 +9923,6 @@
    "dataName": "Project_120cmIRLaserBattery",
    "techCategory": "MilitaryScience",
    "AI_techRole": "SpaceWar",
-   "AI_criticalTech": true,
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 600,
    "prereqs": [
@@ -9890,7 +10000,6 @@
    "dataName": "Project_720cmIRLaserCannon",
    "techCategory": "MilitaryScience",
    "AI_techRole": "SpaceWar",
-   "AI_criticalTech": true,
    "AI_projectRole": "EnergyWeapons",
    "researchCost": 800,
    "prereqs": [
@@ -11215,7 +11324,7 @@
    "techCategory": "SocialScience",
    "AI_techRole": "EarthPolitics",
    "AI_criticalTech": true,
-   "AI_projectRole": "Councilors",
+   "AI_projectRole": "Core",
    "researchCost": 600,
    "prereqs": [
       "WeAreNotAlone"
@@ -11238,7 +11347,7 @@
    "techCategory": "SocialScience",
    "AI_techRole": "EarthPolitics",
    "AI_criticalTech": true,
-   "AI_projectRole": "Councilors",
+   "AI_projectRole": "Core",
    "researchCost": 1200,
    "prereqs": [
       "QuantumEncryption",
@@ -11329,6 +11438,7 @@
    "oneTimeGlobally": false,
    "repeatable": false,
    "factionAvailableChance": 40,
+   "factionAlways": "ExploitCouncil",
    "initialUnlockChance": 0,
    "deltaUnlockChance": 5,
    "maxUnlockChance": 60,
@@ -12297,13 +12407,14 @@
    "techCategory": "SocialScience",
    "AI_techRole": "Income",
    "AI_projectRole": "Research",
-   "researchCost": 3500,
+   "researchCost": 5000,
    "prereqs": [
       "DirectedSpaceResearch",
       "AdvancedNeuralNetworks"
    ],
    "effects": [
-      "Effect_IncreaseProjectUnlockChance"
+      "Effect_IncreaseProjectUnlockChance",
+      "Effect_IncreaseMonthlyProjectTriggerChance01"
    ],
    "oneTimeGlobally": false,
    "repeatable": false,
@@ -13429,7 +13540,7 @@
    "resourcesGranted": []
 },
  {
-   "friendlyName": "Molecular Benefication",
+   "friendlyName": "Molecular Beneficiation",
    "dataName": "Project_MolecularBenefication",
    "techCategory": "Materials",
    "AI_techRole": "SpaceDevelopment",
@@ -13456,7 +13567,6 @@
    "dataName": "Project_RapidFissileEnrichment",
    "techCategory": "Materials",
    "AI_techRole": "SpaceDevelopment",
-   "AI_criticalTech": true,
    "AI_projectRole": "SpaceResources",
    "researchCost": 20000,
    "prereqs": [
@@ -14353,6 +14463,7 @@
    "dataName": "Project_PherocyteScanners",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 10000,
    "prereqs": [
@@ -14383,6 +14494,7 @@
    "friendlyName": "Pherocyte Decon Operations",
    "dataName": "Project_PherocyteDeconOperations",
    "techCategory": "Xenology",
+   "AI_criticalTech": true,   
    "AI_techRole": "EarthPolitics",
    "AI_projectRole": "Xenology",
    "researchCost": 25000,
@@ -14417,6 +14529,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
    "AI_projectRole": "Xenology",
+   "AI_criticalTech": true,   
    "researchCost": 35000,
    "prereqs": [
       "TransformPhages",
@@ -14821,6 +14934,7 @@
    "dataName": "Project_RegionalSecuritySweeps",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 20000,
    "prereqs": [
@@ -14854,6 +14968,7 @@
    "dataName": "Project_PherocyteQuarantineProtocols",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 10000,
    "prereqs": [
@@ -14885,6 +15000,7 @@
    "dataName": "Project_PolicymakerBehaviorialAnalysis",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 20000,
    "prereqs": [
@@ -14916,6 +15032,7 @@
    "dataName": "Project_AdvancedXenologicalMonitoring",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,  
    "AI_projectRole": "Xenology",
    "researchCost": 20000,
    "prereqs": [
@@ -14951,6 +15068,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
    "AI_projectRole": "Xenology",
+   "AI_criticalTech": true,   
    "researchCost": 20000,
    "prereqs": [
       "WhiteCollarAutomation",
@@ -15015,6 +15133,7 @@
    "dataName": "Project_PherocyteExposureNetworkTracing",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 20000,
    "prereqs": [
@@ -15047,6 +15166,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
    "AI_projectRole": "Xenology",
+   "AI_criticalTech": true,   
    "researchCost": 15000,
    "prereqs": [
       "MindandMachine",
@@ -15077,6 +15197,7 @@
    "dataName": "Project_PublicBehaviorialMonitoring",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 30000,
    "prereqs": [
@@ -15109,6 +15230,7 @@
    "dataName": "Project_CommunityPolicingDrones",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 20000,
    "prereqs": [
@@ -15142,6 +15264,7 @@
    "dataName": "Project_PherocyteLiabilityTheory",
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
+   "AI_criticalTech": true,   
    "AI_projectRole": "Xenology",
    "researchCost": 10000,
    "prereqs": [
@@ -15173,6 +15296,7 @@
    "techCategory": "Xenology",
    "AI_techRole": "EarthPolitics",
    "AI_projectRole": "Xenology",
+   "AI_criticalTech": true,  
    "researchCost": 15000,
    "prereqs": [
       "ArrivalSecurity",

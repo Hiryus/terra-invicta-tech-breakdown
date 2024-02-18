@@ -12,7 +12,7 @@ TIProjectTemplate.description.Project_TheirOperations=Unhelpfully, domestic law 
 
 TIProjectTemplate.displayName.Project_TheirMovements=Alien Movements
 TIProjectTemplate.summary.Project_TheirMovements=We now attempt to track alien movements to locate individual aliens on Earth.
-TIProjectTemplate.description.Project_TheirMovements=By studying residue found in the vicinity of reported alien sightings, we have established that, rather than sweating liquid as humans do, these aliens dissipate heat in a similar manner to dry ice sublimating from solid to gas.<br/><br/> Fortunately for us, tracking this is relatively straightforward. During the peak of the Global War on Terror, most nations were already using forward-looking infrared (FLIR) to detect biological aerosol threats. By expanding the quantities and capabilities of such systems, we will be able to detect the presence of this alien byproduct in real time.
+TIProjectTemplate.description.Project_TheirMovements=By studying residue found in the vicinity of reported alien sightings, we have established that, rather than sweating liquid as humans do, these aliens dissipate heat in a similar manner to dry ice sublimating from solid to gas.<br/><br/>Fortunately for us, tracking this is relatively straightforward. During the peak of the Global War on Terror, most nations were already using forward-looking infrared (FLIR) to detect biological aerosol threats. By expanding the quantities and capabilities of such systems, we will be able to detect the presence of this alien byproduct in real time.
 
 TIProjectTemplate.displayName.Project_TheirOrigin=Alien Origin
 TIProjectTemplate.summary.Project_TheirOrigin=We use astronomical data to theorize about where the aliens are coming from.
@@ -60,7 +60,7 @@ TIProjectTemplate.description.Project_TheAlienNation=There is only one path to a
 
 TIProjectTemplate.displayName.Project_HydraInterrogation=Hydra Interrogation
 TIProjectTemplate.summary.Project_HydraInterrogation=We write a new chapter in human history by dialoging with a sentient extraterrestrial species.
-TIProjectTemplate.description.Project_HydraInterrogation=Since the Hydra language is an agglutinative tonal language based primarily around olfactory emissions, it has taken incredible time and patience to divine useful meaning from our captive's multisensory declarations. Every failure is an opportunity to learn, of course - each unfortunate dead end our questioning reached only granted greater insight into the alien's strange language. After countless such stumbles, a discourse of sorts has been established.
+TIProjectTemplate.description.Project_HydraInterrogation=Because the Hydra spoken language is so simple, and complex factors such as meaning and tone spring primarily from olfactory emissions, it has taken incredible time and patience to divine useful meaning from our captive's multisensory declarations. Every failure is an opportunity to learn, of course - each unfortunate dead end our questioning reached only granted greater insight into the alien's strange language. After countless such stumbles, a discourse of sorts has been established.
 
 TIProjectTemplate.displayName.Project_TheirPurpose=Their Purpose
 TIProjectTemplate.summary.Project_TheirPurpose=We probe our captive further to glean why the Hydras launched an invasion of our planet.
@@ -92,7 +92,7 @@ TIProjectTemplate.description.Project_HydraBiowarfare=The revelation that, for a
  
 TIProjectTemplate.displayName.Project_PherocyteMastery=Pherocyte Mastery
 TIProjectTemplate.summary.Project_PherocyteMastery=We seek a means of turning the tables on the Hydra - to mind-control them as they do us.
-TIProjectTemplate.description.Project_PherocyteMastery=While it is antithetical to our interests that the aliens can so easily seize control of any human mind, it is very much in our interests to be able control minds ourselves - whether Hydra or human. Replicating the alien pherocyte cells has, as expected, been highly challenging, due to the profound biological differences between us and them. In fact, it has proven impossible. Artificially replicating their effects, however, has not. The playing field has at last been levelled.
+TIProjectTemplate.description.Project_PherocyteMastery=While it is antithetical to our interests that the aliens can so easily seize control of any human mind, it is very much in our interests to be able control minds ourselves - whether Hydra or human. Replicating the alien pherocyte cells has, as expected, been highly challenging due to the profound biological differences between us and them. In fact, it has proven impossible. Artificially replicating their effects, however, has not. The playing field has at last been levelled.
 
 TIProjectTemplate.displayName.Project_AppeaseVictory=Appease the Invaders
 TIProjectTemplate.summary.Project_AppeaseVictory=We identify an approach which may convince the aliens to show tolerance towards humanity.
@@ -156,7 +156,7 @@ TIProjectTemplate.description.Project_AlienFlora=There was a limited amount to b
 
 TIProjectTemplate.displayName.Project_TheirComputers=Alien Computers
 TIProjectTemplate.summary.Project_TheirComputers=We attempt to decipher the purpose and operation of the machines seemingly used to control the alien spacecraft.
-TIProjectTemplate.description.Project_TheirComputers=To even identify the larger machines recovered from the alien ship has tested our finest scientific minds to the limit - they are so very far apart from our essential concept of a computing device. But though we are now confident that they are indeed computers of a sort, understanding their exact purpose and function is another matter entirely. Their interface is designed neither for human hands nor voices, while even their visual feedback is bewilderingly sparse. Our best hypothesis is that an array of unusual, spongy pads found within the most intact of these machines suggests some other form of sensory I/O - perhaps olfactory operation? Given human limitations on the deciphering and emanation of smell, this is not something that we can easily replicate, though we may be able to create synthetic alternatives in time.<br/><br/>The actual processing elements of the computer have been somewhat easier to categorize. As far as we can tell, they employ a highly advanced form of the quantum computing and photonics we ourselves have recently researched, which likely enables them to monitor, navigate and communicate across this solar system with an effectiveness we can as yet only dream of. 
+TIProjectTemplate.description.Project_TheirComputers=To even identify the larger machines obtained from the aliens has tested our finest scientific minds to the limit - they are so very far apart from our essential concept of a computing device. But though we are now confident that they are indeed computers of a sort, understanding their exact purpose and function is another matter entirely. Their interface is designed neither for human hands nor voices, while even their visual feedback is bewilderingly sparse. Our best hypothesis is that an array of unusual, spongy pads found within the most intact of these machines suggests some other form of sensory I/O - perhaps olfactory operation? Given human limitations on the deciphering and emanation of smell, this is not something that we can easily replicate, though we may be able to create synthetic alternatives in time.<br/><br/>The actual processing elements of the computer have been somewhat easier to categorize. As far as we can tell, they employ a highly advanced form of the quantum computing and photonics we ourselves have recently researched, which likely enables them to monitor, navigate and communicate across this solar system with an effectiveness we can as yet only dream of. 
 
 TIProjectTemplate.displayName.Project_TheirRobotics=Alien Robotics
 TIProjectTemplate.summary.Project_TheirRobotics=We study the array of on-board machines used to maintain the alien craft and its living occupants.
@@ -359,7 +359,7 @@ TIProjectTemplate.displayName.Project_ShipsoftheLine=Ships of the Line
 TIProjectTemplate.summary.Project_ShipsoftheLine=Large warship hulls constructed for battle.
 TIProjectTemplate.displayName.Project_Titans=Titans
 TIProjectTemplate.summary.Project_Titans=We develop a warship hull capable of carrying staggering firepower.
-TIProjectTemplate.displayName.Project_ISRUModule=In-Situ Resource Utilization
+TIProjectTemplate.displayName.Project_ISRUModule=In-Situ Resource Utilization Module
 TIProjectTemplate.summary.Project_ISRUModule=An ISRU module would allow our ships to take on propellant at unimproved sites around the Solar System.
 TIProjectTemplate.displayName.Project_RemassScoop=Remass Scoop
 TIProjectTemplate.summary.Project_RemassScoop=Aerodynamic ship design also allows ships to scoop hydrogen propellant from gas giant atmospheres.
@@ -443,6 +443,8 @@ TIProjectTemplate.displayName.Project_FissionPile=Fission Pile
 TIProjectTemplate.summary.Project_FissionPile=<habmodule>
 TIProjectTemplate.displayName.Project_FusionPile=Fusion Pile
 TIProjectTemplate.summary.Project_FusionPile=<habmodule>
+TIProjectTemplate.displayName.Project_HeavyFissionPile=Heavy Fission Pile
+TIProjectTemplate.summary.Project_HeavyFissionPile=<habmodule>
 TIProjectTemplate.displayName.Project_HydroponicsBay=Hydroponics Bay
 TIProjectTemplate.summary.Project_HydroponicsBay=<habmodule>
 TIProjectTemplate.displayName.Project_InformationScienceLab=Information Science Lab
@@ -499,6 +501,8 @@ TIProjectTemplate.displayName.Project_FissionReactorArray=Fission Reactor Array
 TIProjectTemplate.summary.Project_FissionReactorArray=<habmodule>
 TIProjectTemplate.displayName.Project_FusionReactorArray=Fusion Reactor Array
 TIProjectTemplate.summary.Project_FusionReactorArray=<habmodule>
+TIProjectTemplate.displayName.Project_HeavyFissionReactorArray=Heavy Fission Reactor Array
+TIProjectTemplate.summary.Project_HeavyFissionReactorArray=<habmodule>
 TIProjectTemplate.displayName.Project_InformationScienceResearchCenter=Information Science Research Center
 TIProjectTemplate.summary.Project_InformationScienceResearchCenter=<habmodule>
 TIProjectTemplate.displayName.Project_LayeredDefenseArray=Layered Defense Array
@@ -568,6 +572,8 @@ TIProjectTemplate.displayName.Project_FusionReactorFarm=Fusion Reactor Farm
 TIProjectTemplate.summary.Project_FusionReactorFarm=<habmodule>
 TIProjectTemplate.displayName.Project_GeriatricsFacility=Geriatrics Facility
 TIProjectTemplate.summary.Project_GeriatricsFacility=<habmodule>
+TIProjectTemplate.displayName.Project_HeavyFissionReactorFarm=Heavy Fission Reactor Farm
+TIProjectTemplate.summary.Project_HeavyFissionReactorFarm=<habmodule>
 TIProjectTemplate.displayName.Project_HeavyFusionReactorFarm=Heavy Fusion Reactor Farm
 TIProjectTemplate.summary.Project_HeavyFusionReactorFarm=<habmodule>
 TIProjectTemplate.displayName.Project_InformationScienceInstitute=Information Science Institute
@@ -1414,7 +1420,7 @@ TIProjectTemplate.displayName.Project_RapidDistillationTechniques=Rapid Distilla
 TIProjectTemplate.summary.Project_RapidDistillationTechniques=Genetically engineered microbes assist in refining volatiles from our mines.
 TIProjectTemplate.displayName.Project_DeepSpaceMetallurgy=Deep Space Metallurgy
 TIProjectTemplate.summary.Project_DeepSpaceMetallurgy=Low-gravity refining techniques help us extract more material from mineral ore.
-TIProjectTemplate.displayName.Project_MolecularBenefication=Molecular Benefication
+TIProjectTemplate.displayName.Project_MolecularBenefication=Molecular Beneficiation
 TIProjectTemplate.summary.Project_MolecularBenefication=We squeeze more rare metals out of space rocks, increasing nobles production and allowing construction of novel ship modules.
 TIProjectTemplate.displayName.Project_RapidFissileEnrichment=Rapid Fissile Enrichment
 TIProjectTemplate.summary.Project_RapidFissileEnrichment=We turn low-grade uranium and thorium ores into useful fissile material.

@@ -2184,6 +2184,27 @@
    ]
 },
  {
+   "dataName": "Effect_CouncilorExposure",
+   "instantEffect": "Exposure_SingleCouncilor",
+   "operation": "",
+   "value": 0.5,
+   "instantRnd": null,
+   "strValue": "",
+   "effectTarget": "InputState",
+   "effectSecondaryTarget": "",
+   "effectDuration": "instant",
+   "stackable": null,
+   "duration_months": -1,
+   "initialFactionsStr": [
+      "",
+      ""
+   ],
+   "contexts": [
+      "",
+      ""
+   ]
+},
+ {
    "dataName": "Effect_SecondaryTargetNegativePropaganda_Faction10",
    "instantEffect": "Propaganda_Faction",
    "operation": "",
@@ -3766,7 +3787,7 @@
    "instantRnd": 0.01,
    "strValue": "",
    "effectTarget": "InputState",
-   "effectSecondaryTarget": "",
+   "effectSecondaryTarget": "InputState",
    "effectDuration": "instant",
    "stackable": null,
    "duration_months": -1,
@@ -3787,7 +3808,7 @@
    "instantRnd": 0.01,
    "strValue": "",
    "effectTarget": "InputState",
-   "effectSecondaryTarget": "",
+   "effectSecondaryTarget": "InputState",
    "effectDuration": "instant",
    "stackable": null,
    "duration_months": -1,
@@ -12267,7 +12288,7 @@
    "dataName": "Effect_RemoveLiedAboutInfluence",
    "instantEffect": "RemoveEffectFromFaction",
    "operation": "",
-   "value": null,
+   "value": 1,
    "instantRnd": null,
    "strValue": "Effect_LiedAboutInfluence",
    "effectTarget": "SourceFaction",
@@ -12281,6 +12302,27 @@
    ],
    "contexts": [
       "",
+      ""
+   ]
+},
+ {
+   "dataName": "Effect_IncreaseMonthlyProjectTriggerChance01",
+   "instantEffect": "",
+   "operation": "Additive",
+   "value": 0.01,
+   "instantRnd": null,
+   "strValue": "",
+   "effectTarget": "SourceFaction",
+   "effectSecondaryTarget": "",
+   "effectDuration": "permanent",
+   "stackable": false,
+   "duration_months": -1,
+   "initialFactionsStr": [
+      "",
+      ""
+   ],
+   "contexts": [
+      "MonthlyProjectTriggerChance",
       ""
    ]
 }

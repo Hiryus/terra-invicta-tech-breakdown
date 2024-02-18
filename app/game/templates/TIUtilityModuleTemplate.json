@@ -86,7 +86,7 @@
       "water": 0.1,
       "volatiles": 0.2,
       "metals": 0.325,
-      "nobleMetals": 0.35,
+      "nobleMetals": 0.37498,
       "fissiles": 0.00002,
       "antimatter": null,
       "exotics": null
@@ -120,7 +120,7 @@
       "water": 0.1,
       "volatiles": 0.2,
       "metals": 0.3,
-      "nobleMetals": 0.35,
+      "nobleMetals": 0.39995,
       "fissiles": 0.00005,
       "antimatter": null,
       "exotics": null
@@ -154,9 +154,9 @@
       "water": 0.1,
       "volatiles": 0.2,
       "metals": 0.3,
-      "nobleMetals": 0.35,
+      "nobleMetals": 0.39995999999,
       "fissiles": 0.00004,
-      "antimatter": 5e-8,
+      "antimatter": 0.0000000000075,
       "exotics": null
    },
    "specialModuleRules": [
@@ -266,7 +266,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 2,
+   "marineOpsValue": 4,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_MarineAssaultUnit",
    "modelResource": ""
@@ -300,7 +300,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 4,
+   "marineOpsValue": 6,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_AdvancedMarineAssaultUnit",
    "modelResource": ""
@@ -334,7 +334,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 6,
+   "marineOpsValue": 8,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_EliteMarineAssaultUnit",
    "modelResource": ""
@@ -368,7 +368,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 8,
+   "marineOpsValue": 10,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_Spartans",
    "modelResource": ""
@@ -402,7 +402,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 8,
+   "marineOpsValue": 10,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_Rangers",
    "modelResource": ""
@@ -436,7 +436,7 @@
       "",
       ""
    ],
-   "marineOpsValue": 8,
+   "marineOpsValue": 10,
    "ECMValue": null,
    "iconResource": "shipbuildericons/ICO_Immortals",
    "modelResource": ""
@@ -717,7 +717,7 @@
    "dataName": "SolarOutpostKit",
    "friendlyName": "Solar Outpost Kit",
    "crew": 3,
-   "mass_tons": 200,
+   "mass_tons": 250,
    "grouping": -1,
    "requiredProjectName": "Project_SolarOutpostKit",
    "powerRequirement_MW": 0,
@@ -766,7 +766,7 @@
       "water": 0.1,
       "volatiles": 0.25,
       "metals": 0.4,
-      "nobleMetals": 0.225,
+      "nobleMetals": 0.2,
       "fissiles": 0.05,
       "antimatter": null,
       "exotics": null
@@ -800,7 +800,7 @@
       "water": 0.1,
       "volatiles": 0.25,
       "metals": 0.4,
-      "nobleMetals": 0.225,
+      "nobleMetals": 0.2,
       "fissiles": 0.05,
       "antimatter": null,
       "exotics": null
@@ -834,7 +834,7 @@
       "water": 0.05,
       "volatiles": 0.2,
       "metals": 0.4,
-      "nobleMetals": 0.34,
+      "nobleMetals": 0.33,
       "fissiles": 0.02,
       "antimatter": null,
       "exotics": null
@@ -868,7 +868,7 @@
       "water": 0.05,
       "volatiles": 0.2,
       "metals": 0.4,
-      "nobleMetals": 0.34,
+      "nobleMetals": 0.33,
       "fissiles": 0.02,
       "antimatter": null,
       "exotics": null
@@ -970,7 +970,7 @@
       "water": 0.1,
       "volatiles": 0.25,
       "metals": 0.4,
-      "nobleMetals": 0.225,
+      "nobleMetals": 0.2,
       "fissiles": 0.05,
       "antimatter": null,
       "exotics": null
@@ -1004,7 +1004,7 @@
       "water": 0.1,
       "volatiles": 0.25,
       "metals": 0.4,
-      "nobleMetals": 0.225,
+      "nobleMetals": 0.2,
       "fissiles": 0.05,
       "antimatter": null,
       "exotics": null
@@ -1152,7 +1152,7 @@
    ],
    "marineOpsValue": null,
    "ECMValue": null,
-   "iconResource": "shipbuildericons/ICO_MarineAssaultUnit",
+   "iconResource": "shipbuildericons/ICO_Unknown",
    "modelResource": ""
 },
  {
@@ -1184,9 +1184,9 @@
       "Assault",
       "ImmunetoAerobrakingDamage"
    ],
-   "marineOpsValue": 6,
+   "marineOpsValue": 9,
    "ECMValue": null,
-   "iconResource": "shipbuildericons/ICO_MarineAssaultUnit",
+   "iconResource": "shipbuildericons/ICO_Unknown",
    "modelResource": ""
 },
  {

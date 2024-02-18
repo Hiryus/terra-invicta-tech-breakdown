@@ -391,7 +391,7 @@
    "salvo_shots": null,
    "intraSalvoCooldown_s": null,
    "efficiency": 0.25,
-   "flatChipping": 0.25,
+   "flatChipping": 0.35,
    "magazine": 200,
    "ammoMass_kg": 30,
    "muzzleVelocity_kps": 3.6,

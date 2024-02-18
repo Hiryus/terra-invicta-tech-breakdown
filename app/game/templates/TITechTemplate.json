@@ -432,7 +432,6 @@
    "researchCost": 50000,
    "prereqs": [
       "DeuteriumHelium3Fusion",
-      "AdvancedCarbonManipulation",
       "ArrivalEconomics"
    ],
    "effects": [
@@ -945,7 +944,7 @@
    "endGameTech": false,
    "researchCost": 75000,
    "prereqs": [
-      "NuclearFusioninSpace"
+      "DeuteriumTritiumFusion"
    ],
    "effects": [
       "Effect_GlobalFusionTechIncrease"
@@ -1357,7 +1356,6 @@
    "endGameTech": false,
    "researchCost": 50000,
    "prereqs": [
-      "AdvancedAtomicManipulation",
       "Diamondoids"
    ]
 },
@@ -1808,7 +1806,7 @@
    "endGameTech": false,
    "researchCost": 100000,
    "prereqs": [
-      "NuclearFusioninSpace",
+      "DeuteriumTritiumFusion",
       "Ultracapacitors",
       "Diamondoids"
    ],
@@ -1839,9 +1837,9 @@
    "AI_criticalTech": false,
    "endGameTech": false,
    "researchCost": 60000,
-   "prereqs": [     
-      "Diamondoids",
-      "FleetLogistics"
+   "prereqs": [
+      "FleetLogistics",
+      "Diamondoids"
    ]
 },
  {
