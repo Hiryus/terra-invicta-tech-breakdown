@@ -1,9 +1,9 @@
 [
  {
-   "dataName": "AntimatterTrap",
-   "friendlyName": "Antimatter Trap",
+   "dataName": "AdministrationNode",
+   "friendlyName": "Administration Node",
    "coreModule": false,
-   "habType": "Station",
+   "habType": "Any",
    "onePerHab": true,
    "automated": false,
    "allowsShipConstruction": false,
@@ -12,12 +12,12 @@
    "noBuild": false,
    "destroyed": false,
    "tier": 1,
-   "requiredProjectName": "Project_AntimatterTrap",
-   "crew": 3,
-   "power": -30,
+   "requiredProjectName": "Project_AdministrationNode",
+   "crew": 40,
+   "power": -10,
    "reserved": 0,
-   "baseMass_tons": 20,
-   "buildTime_Days": 30,
+   "baseMass_tons": 30,
+   "buildTime_Days": 45,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
@@ -33,10 +33,77 @@
    "spaceCombatValue": 0,
    "constructionTimeModifier": 1,
    "miningModifier": 0,
-   "controlPointCapacity": 0,
+   "controlPointCapacity": 4,
    "techBonuses": [],
    "specialRules": [
-      "HarvestAntimatter"
+      "LEOControlPointCapacity",
+      "Efficiency"
+   ],
+   "specialRulesValue": 0.025,
+   "supportMaterials_month": {
+      "money": 6,
+      "volatiles": 0.03,
+      "metals": 0.03
+   },
+   "weightedBuildMaterials": {
+      "water": 0.08,
+      "volatiles": 0.4,
+      "metals": 0.5,
+      "nobleMetals": 0.02
+   },
+   "baseIconResource": "habmodules/base_T1_AdministrationNode",
+   "stationIconResource": "habmodules/station_T1_AdministrationNode",
+   "stationModelResource": "habmodules/station_T1_AdministrationNode_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
+   "alertWorthy": false,
+   "alienModule": false,
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "AntimatterTrap",
+   "friendlyName": "Antimatter Trap",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": true,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 1,
+   "requiredProjectName": "Project_AntimatterTrap",
+   "crew": 3,
+   "power": -15,
+   "reserved": 0,
+   "baseMass_tons": 20,
+   "buildTime_Days": 30,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 5,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [
+      {
+         "category": "Energy",
+         "bonus": 0.05
+      }
+   ],
+   "specialRules": [
+      "HarvestAntimatter",
+      "TechBonusDiminishingReturns"
    ],
    "specialRulesValue": 0.25,
    "supportMaterials_month": {
@@ -55,7 +122,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedFissionPile",
@@ -111,7 +179,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedMiningComplex",
@@ -166,7 +235,8 @@
    "baseIconResource": "habmodules/base_T1_AutomatedMiningComplex",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedOutpostCore",
@@ -192,7 +262,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -2,
+   "missionControl": -1,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -216,7 +286,8 @@
    "baseIconResource": "habmodules/base_T1_AutomatedOutpostCore",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedPlatformCore",
@@ -242,7 +313,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -2,
+   "missionControl": -1,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -268,7 +339,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedSolarCollector",
@@ -324,7 +396,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_solar",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AutomatedSupplyDepot",
@@ -380,7 +453,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "BroadcastOutlet",
@@ -419,7 +493,7 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "Requires_Inhabited_Body",
+      "Requires_Colonized_Body",
       "NotInIrradiated"
    ],
    "supportMaterials_month": {
@@ -437,7 +511,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ConstructionModule",
@@ -496,7 +571,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "EnergyLab",
@@ -513,7 +589,7 @@
    "tier": 1,
    "requiredProjectName": "Project_EnergyLab",
    "crew": 3,
-   "power": -8,
+   "power": -7,
    "reserved": 0,
    "baseMass_tons": 15,
    "buildTime_Days": 30,
@@ -562,7 +638,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FissionPile",
@@ -618,7 +695,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FusionPile",
@@ -674,7 +752,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "HeavyFissionPile",
@@ -718,10 +797,10 @@
       "fissiles": 0.075
    },
    "weightedBuildMaterials": {
-      "water": 0.075,
+      "water": 0.05,
       "volatiles": 0.3,
-      "metals": 0.475,
-      "nobleMetals": 0.2,
+      "metals": 0.5,
+      "nobleMetals": 0.1,
       "fissiles": 0.05
    },
    "baseIconResource": "habmodules/base_T1_HeavyFissionPile",
@@ -730,7 +809,68 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "HeavyFusionPile",
+   "friendlyName": "Heavy Fusion Pile",
+   "coreModule": false,
+   "habType": "Any",
+   "onePerHab": false,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 1,
+   "requiredProjectName": "Project_HeavyFusionPile",
+   "crew": 10,
+   "power": 35,
+   "reserved": 0,
+   "baseMass_tons": 60,
+   "buildTime_Days": 45,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "supportMaterials_month": {
+      "money": 5,
+      "water": 1,
+      "volatiles": 0.5,
+      "metals": 0.1,
+      "nobleMetals": 0.1,
+      "fissiles": 0.02
+   },
+   "weightedBuildMaterials": {
+      "water": 0.03,
+      "volatiles": 0.25,
+      "metals": 0.35,
+      "nobleMetals": 0.35,
+      "fissiles": 0.02
+   },
+   "baseIconResource": "habmodules/base_T1_HeavyFusionPile",
+   "stationIconResource": "habmodules/station_T1_HeavyFusionPile",
+   "stationModelResource": "habmodules/station_T1_HeavyFusionPile_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_T1_large",
+   "alertWorthy": false,
+   "alienModule": false,
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "HydroponicsBay",
@@ -787,7 +927,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "InformationScienceLab",
@@ -850,7 +991,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "LifeScienceLab",
@@ -914,7 +1056,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MarinePlatoonBarracks",
@@ -975,7 +1118,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MaterialsLab",
@@ -992,7 +1136,7 @@
    "tier": 1,
    "requiredProjectName": "Project_MaterialsLab",
    "crew": 3,
-   "power": -5,
+   "power": -6,
    "reserved": 0,
    "baseMass_tons": 15,
    "buildTime_Days": 30,
@@ -1040,7 +1184,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MilitaryScienceLab",
@@ -1103,7 +1248,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "OutpostCore",
@@ -1129,7 +1275,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -1,
+   "missionControl": -2,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -1152,7 +1298,8 @@
    "baseIconResource": "habmodules/base_T1_OutpostCore",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "OutpostMiningComplex",
@@ -1178,7 +1325,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -1,
+   "missionControl": 0,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -1207,7 +1354,75 @@
    "baseIconResource": "habmodules/base_T1_OutpostMiningComplex",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "ParticleCollider",
+   "friendlyName": "Particle Collider",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": false,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 1,
+   "requiredProjectName": "Project_ParticleCollider",
+   "crew": 10,
+   "power": -85,
+   "reserved": 0,
+   "baseMass_tons": 200,
+   "buildTime_Days": 60,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 2,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0.0001,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [
+      {
+         "category": "Energy",
+         "bonus": 0.01
+      }
+   ],
+   "specialRules": [
+      "TechBonusDiminishingReturns"
+   ],
+   "supportMaterials_month": {
+      "money": 6,
+      "water": 2,
+      "volatiles": 2,
+      "metals": 1,
+      "nobleMetals": 1,
+      "fissiles": 1
+   },
+   "weightedBuildMaterials": {
+      "water": 0.05,
+      "volatiles": 0.2,
+      "metals": 0.35,
+      "nobleMetals": 0.35,
+      "fissiles": 0.05
+   },
+   "stationIconResource": "habmodules/station_T1_ParticleCollider",
+   "stationModelResource": "habmodules/station_T1_ParticleCollider_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_T1_large",
+   "alertWorthy": false,
+   "alienModule": false,
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "PlatformCore",
@@ -1233,7 +1448,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -1,
+   "missionControl": -2,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -1258,7 +1473,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "PointDefenseArray",
@@ -1316,7 +1532,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Quarters",
@@ -1332,8 +1549,8 @@
    "destroyed": false,
    "tier": 1,
    "requiredProjectName": "Project_Quarters",
-   "crew": 30,
-   "power": -3,
+   "crew": 50,
+   "power": -2,
    "reserved": 0,
    "baseMass_tons": 60,
    "buildTime_Days": 30,
@@ -1374,7 +1591,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SocialScienceLab",
@@ -1391,7 +1609,7 @@
    "tier": 1,
    "requiredProjectName": "Project_SocialScienceLab",
    "crew": 3,
-   "power": -3,
+   "power": -4,
    "reserved": 0,
    "baseMass_tons": 15,
    "buildTime_Days": 30,
@@ -1419,12 +1637,12 @@
    ],
    "specialRules": [
       "LEOBonusPropagandaStrength",
-      "Requires_Inhabited_Body",
+      "Requires_Colonized_Body",
       "TechBonusDiminishingReturns"
    ],
    "specialRulesValue": 1,
    "supportMaterials_month": {
-      "money": 2
+      "money": 3
    },
    "weightedBuildMaterials": {
       "water": 0,
@@ -1437,7 +1655,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SolarCollector",
@@ -1493,7 +1712,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_solar",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceDock",
@@ -1532,7 +1752,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "PowerFirst"
+      "PowerFirst",
+      "Shipyard"
    ],
    "supportMaterials_month": {
       "money": 0
@@ -1549,7 +1770,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceScienceLab",
@@ -1611,7 +1833,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SupplyDepot",
@@ -1669,7 +1892,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "TouristBerth",
@@ -1725,7 +1949,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "XenologyLab",
@@ -1788,7 +2013,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AdministrationTower",
@@ -1803,6 +2029,7 @@
    "noBuild": false,
    "destroyed": false,
    "tier": 2,
+   "upgradesFromName": "AdministrationNode",
    "requiredProjectName": "Project_AdministrationTower",
    "crew": 200,
    "power": -30,
@@ -1824,7 +2051,7 @@
    "spaceCombatValue": 0,
    "constructionTimeModifier": 1,
    "miningModifier": 0,
-   "controlPointCapacity": 10,
+   "controlPointCapacity": 12,
    "techBonuses": [],
    "specialRules": [
       "LEOControlPointCapacity",
@@ -1849,7 +2076,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AntimatterHarvester",
@@ -1867,14 +2095,14 @@
    "upgradesFromName": "AntimatterTrap",
    "requiredProjectName": "Project_AntimatterHarvester",
    "crew": 15,
-   "power": -120,
+   "power": -60,
    "reserved": 0,
    "baseMass_tons": 100,
    "buildTime_Days": 90,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 0,
+   "incomeResearch_month": 10,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -1887,9 +2115,15 @@
    "constructionTimeModifier": 1,
    "miningModifier": 0,
    "controlPointCapacity": 0,
-   "techBonuses": [],
+   "techBonuses": [
+      {
+         "category": "Energy",
+         "bonus": 0.2
+      }
+   ],
    "specialRules": [
-      "HarvestAntimatter"
+      "HarvestAntimatter",
+      "TechBonusDiminishingReturns"
    ],
    "specialRulesValue": 0.5,
    "supportMaterials_month": {
@@ -1908,7 +2142,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Atomsmasher",
@@ -1923,6 +2158,7 @@
    "noBuild": false,
    "destroyed": false,
    "tier": 2,
+   "upgradesFromName": "ParticleCollider",
    "requiredProjectName": "Project_Atomsmasher",
    "crew": 20,
    "power": -250,
@@ -1951,9 +2187,6 @@
          "bonus": 0.025
       }
    ],
-   "specialRules": [
-      "TechBonusDiminishingReturns"
-   ],
    "supportMaterials_month": {
       "money": 20,
       "water": 10,
@@ -1974,7 +2207,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "CommunicationsHub",
@@ -2034,7 +2268,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DeepSpaceTelescope",
@@ -2097,7 +2332,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": true
+   "objectiveModule": true,
+   "disable": false
 },
  {
    "dataName": "EnergyResearchCenter",
@@ -2115,7 +2351,7 @@
    "upgradesFromName": "EnergyLab",
    "requiredProjectName": "Project_EnergyResearchCenter",
    "crew": 20,
-   "power": -32,
+   "power": -28,
    "reserved": 0,
    "baseMass_tons": 75,
    "buildTime_Days": 90,
@@ -2164,7 +2400,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Farm",
@@ -2222,7 +2459,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FissionReactorArray",
@@ -2280,7 +2518,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FusionReactorArray",
@@ -2338,7 +2577,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "HeavyFissionReactorArray",
@@ -2396,7 +2636,69 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "HeavyFusionReactorArray",
+   "friendlyName": "Heavy Fusion Reactor Array",
+   "coreModule": false,
+   "habType": "Any",
+   "onePerHab": false,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 2,
+   "upgradesFromName": "HeavyFusionPile",
+   "requiredProjectName": "Project_HeavyFusionReactorArray",
+   "crew": 50,
+   "power": 150,
+   "reserved": 0,
+   "baseMass_tons": 300,
+   "buildTime_Days": 120,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "supportMaterials_month": {
+      "money": 12,
+      "water": 4,
+      "volatiles": 2,
+      "metals": 0.5,
+      "nobleMetals": 0.5,
+      "fissiles": 0.08
+   },
+   "weightedBuildMaterials": {
+      "water": 0.03,
+      "volatiles": 0.25,
+      "metals": 0.35,
+      "nobleMetals": 0.35,
+      "fissiles": 0.02
+   },
+   "baseIconResource": "habmodules/base_T2_HeavyFusionReactorArray",
+   "stationIconResource": "habmodules/station_T2_HeavyFusionReactorArray",
+   "stationModelResource": "habmodules/station_T2_HeavyFusionReactorArray_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
+   "alertWorthy": false,
+   "alienModule": false,
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "InformationScienceResearchCenter",
@@ -2460,7 +2762,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "LayeredDefenseArray",
@@ -2520,7 +2823,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "LifeScienceResearchCenter",
@@ -2586,7 +2890,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MarineCompanyBarracks",
@@ -2648,7 +2953,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MaterialsResearchCenter",
@@ -2666,7 +2972,7 @@
    "upgradesFromName": "MaterialsLab",
    "requiredProjectName": "Project_MaterialsResearchCenter",
    "crew": 25,
-   "power": -20,
+   "power": -24,
    "reserved": 0,
    "baseMass_tons": 75,
    "buildTime_Days": 90,
@@ -2715,7 +3021,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MilitaryScienceResearchCenter",
@@ -2779,7 +3086,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Nanofactory",
@@ -2850,7 +3158,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "OperationsCenter",
@@ -2890,7 +3199,9 @@
    "techBonuses": [],
    "supportMaterials_month": {
       "money": 15,
-      "nobleMetals": 0.1
+      "volatiles": 0.5,
+      "metals": 0.5,
+      "nobleMetals": 0.25
    },
    "weightedBuildMaterials": {
       "water": 0,
@@ -2904,7 +3215,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "OrbitalHospital",
@@ -2951,7 +3263,7 @@
       "Requires_Inhabited_Body",
       "TechBonusDiminishingReturns",
       "AtrocityToKill",
-	  "NotInIrradiated"
+      "NotInIrradiated"
    ],
    "supportMaterials_month": {
       "money": 0,
@@ -2971,7 +3283,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ResearchCampus",
@@ -2991,7 +3304,7 @@
    "power": -30,
    "reserved": 0,
    "baseMass_tons": 1000,
-   "buildTime_Days": 120,
+   "buildTime_Days": 180,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
@@ -3010,7 +3323,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "AtrocityToKill_Populous"
+      "Requires_Colonized_Body",
+      "AtrocityToKill"
    ],
    "supportMaterials_month": {
       "money": 30,
@@ -3029,7 +3343,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ResidentialModule",
@@ -3091,7 +3406,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "OrbitalCore",
@@ -3143,7 +3459,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SettlementCore",
@@ -3193,7 +3510,8 @@
    "baseIconResource": "habmodules/base_T2_SettlementCore",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SettlementMiningComplex",
@@ -3220,7 +3538,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -2,
+   "missionControl": 0,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -3249,7 +3567,8 @@
    "baseIconResource": "habmodules/base_T2_SettlementMiningComplex",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Shipyard",
@@ -3289,7 +3608,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "PowerFirst"
+      "PowerFirst",
+      "Shipyard"
    ],
    "supportMaterials_month": {
       "money": 0
@@ -3306,7 +3626,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SkunkWorks",
@@ -3362,7 +3683,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SocialScienceResearchCenter",
@@ -3380,7 +3702,7 @@
    "upgradesFromName": "SocialScienceLab",
    "requiredProjectName": "Project_SocialScienceResearchCenter",
    "crew": 25,
-   "power": -12,
+   "power": -16,
    "reserved": 0,
    "baseMass_tons": 75,
    "buildTime_Days": 90,
@@ -3413,7 +3735,7 @@
    ],
    "specialRulesValue": 2,
    "supportMaterials_month": {
-      "money": 6
+      "money": 8
    },
    "weightedBuildMaterials": {
       "water": 0,
@@ -3426,7 +3748,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SolarArray",
@@ -3483,7 +3806,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceHotel",
@@ -3525,7 +3849,6 @@
    "specialRules": [
       "Requires_Inhabited_Body",
       "NotInIrradiated",
-      "TechBonusDiminishingReturns",
       "AtrocityToKill"
    ],
    "supportMaterials_month": {
@@ -3545,7 +3868,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceScienceResearchCenter",
@@ -3607,7 +3931,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "XenoscienceResearchCenter",
@@ -3671,7 +3996,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AdministrationComplex",
@@ -3733,7 +4059,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AgricultureComplex",
@@ -3791,7 +4118,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AntimatterFarm",
@@ -3809,14 +4137,14 @@
    "upgradesFromName": "AntimatterHarvester",
    "requiredProjectName": "Project_AntimatterFarm",
    "crew": 75,
-   "power": -480,
+   "power": -240,
    "reserved": 0,
    "baseMass_tons": 800,
    "buildTime_Days": 180,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 0,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -3829,9 +4157,15 @@
    "constructionTimeModifier": 1,
    "miningModifier": 0,
    "controlPointCapacity": 0,
-   "techBonuses": [],
+   "techBonuses": [
+      {
+         "category": "Energy",
+         "bonus": 0.5
+      }
+   ],
    "specialRules": [
-      "HarvestAntimatter"
+      "HarvestAntimatter",
+      "TechBonusDiminishingReturns"
    ],
    "specialRulesValue": 1,
    "supportMaterials_month": {
@@ -3853,7 +4187,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Battlestations",
@@ -3913,7 +4248,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "CivilianComplex",
@@ -3975,7 +4311,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ColonyCore",
@@ -4002,7 +4339,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -5,
+   "missionControl": -4,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -4025,7 +4362,8 @@
    "baseIconResource": "habmodules/base_T3_ColonyCore",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ColonyMiningComplex",
@@ -4052,7 +4390,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -3,
+   "missionControl": 0,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -4081,7 +4419,8 @@
    "baseIconResource": "habmodules/base_T3_ColonyMiningComplex",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "CommandCenter",
@@ -4122,7 +4461,9 @@
    "techBonuses": [],
    "supportMaterials_month": {
       "money": 30,
-      "nobleMetals": 0.2
+      "volatiles": 1,
+      "metals": 1,
+      "nobleMetals": 0.5
    },
    "weightedBuildMaterials": {
       "water": 0,
@@ -4136,7 +4477,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "EnergyInstitute",
@@ -4154,14 +4496,14 @@
    "upgradesFromName": "EnergyResearchCenter",
    "requiredProjectName": "Project_EnergyInstitute",
    "crew": 100,
-   "power": -96,
+   "power": -84,
    "reserved": 0,
    "baseMass_tons": 600,
    "buildTime_Days": 180,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -4203,7 +4545,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FissionReactorFarm",
@@ -4261,7 +4604,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Foundry",
@@ -4318,7 +4662,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "FusionReactorFarm",
@@ -4376,7 +4721,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "GeriatricsFacility",
@@ -4444,7 +4790,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "HeavyFissionReactorFarm",
@@ -4502,7 +4849,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "HeavyFusionReactorFarm",
@@ -4517,12 +4865,12 @@
    "noBuild": false,
    "destroyed": false,
    "tier": 3,
-   "upgradesFromName": "FusionReactorFarm",
+   "upgradesFromName": "HeavyFusionReactorArray",
    "requiredProjectName": "Project_HeavyFusionReactorFarm",
-   "crew": 250,
+   "crew": 150,
    "power": 450,
    "reserved": 0,
-   "baseMass_tons": 8000,
+   "baseMass_tons": 2400,
    "buildTime_Days": 360,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
@@ -4542,7 +4890,7 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "supportMaterials_month": {
-      "money": 60,
+      "money": 36,
       "water": 10,
       "volatiles": 6,
       "metals": 1,
@@ -4556,13 +4904,75 @@
       "nobleMetals": 0.35,
       "fissiles": 0.02
    },
-   "baseIconResource": "habmodules/base_T3_TerawattFusionReactor",
-   "stationIconResource": "habmodules/station_T3_TerawattFusionReactor",
-   "stationModelResource": "habmodules/station_T3_TerawattFusionReactor_Module",
+   "baseIconResource": "habmodules/base_T3_HeavyFusionReactorFarm",
+   "stationIconResource": "habmodules/station_T3_HeavyFusionReactorFarm",
+   "stationModelResource": "habmodules/station_T3_HeavyFusionReactorFarm_Module",
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "Helium-3Mine",
+   "friendlyName": "Helium-3 Mine",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": true,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 3,
+   "requiredProjectName": "Project_Helium-3Mine",
+   "crew": 75,
+   "power": -300,
+   "reserved": 0,
+   "baseMass_tons": 2400,
+   "buildTime_Days": 180,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": -3,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "specialRules": [
+      "HarvestHelium3",
+      "Requires_GasGiant_Orbit",
+      "Requires_Interface_Orbit",
+      "PowerFirst"
+   ],
+   "supportMaterials_month": {
+      "money": 30,
+      "metals": 10,
+      "nobleMetals": 1.5
+   },
+   "weightedBuildMaterials": {
+      "water": 0.05,
+      "volatiles": 0.15,
+      "metals": 0.55,
+      "nobleMetals": 0.25
+   },
+   "stationIconResource": "habmodules/station_T3_Helium-3Mine",
+   "stationModelResource": "habmodules/station_T3_Helium-3Mine_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_T3_large",
+   "alertWorthy": false,
+   "alienModule": false,
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "InformationScienceInstitute",
@@ -4587,7 +4997,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -4626,7 +5036,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "InterstellarLaunchingLaser",
@@ -4683,7 +5094,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": true
+   "objectiveModule": true,
+   "disable": false
 },
  {
    "dataName": "LifeScienceInstitute",
@@ -4708,7 +5120,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -4749,7 +5161,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MarineBattalionBarracks",
@@ -4811,7 +5224,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MaterialsInstitute",
@@ -4829,14 +5243,14 @@
    "upgradesFromName": "MaterialsResearchCenter",
    "requiredProjectName": "Project_MaterialsInstitute",
    "crew": 125,
-   "power": -60,
+   "power": -72,
    "reserved": 0,
    "baseMass_tons": 600,
    "buildTime_Days": 180,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -4878,7 +5292,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MediaCenter",
@@ -4938,7 +5353,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "MilitaryScienceInstitute",
@@ -4963,7 +5379,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -5002,7 +5418,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "NanofacturingComplex",
@@ -5074,7 +5491,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "ResearchUniversity",
@@ -5095,13 +5513,13 @@
    "power": -90,
    "reserved": 0,
    "baseMass_tons": 8000,
-   "buildTime_Days": 240,
+   "buildTime_Days": 360,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 180,
+   "incomeResearch_month": 200,
    "incomeProjects": 0,
-   "missionControl": -1,
+   "missionControl": -2,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -5114,7 +5532,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "AtrocityToKill_Populous"
+      "Requires_Inhabited_Body",
+      "AtrocityToKill"
    ],
    "supportMaterials_month": {
       "money": 100,
@@ -5133,7 +5552,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SentinelComplex",
@@ -5194,7 +5614,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": true
+   "objectiveModule": true,
+   "disable": false
 },
  {
    "dataName": "SocialScienceInstitute",
@@ -5212,14 +5633,14 @@
    "upgradesFromName": "SocialScienceResearchCenter",
    "requiredProjectName": "Project_SocialScienceInstitute",
    "crew": 125,
-   "power": -36,
+   "power": -48,
    "reserved": 0,
    "baseMass_tons": 600,
    "buildTime_Days": 180,
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -5245,7 +5666,7 @@
    ],
    "specialRulesValue": 3,
    "supportMaterials_month": {
-      "money": 18
+      "money": 24
    },
    "weightedBuildMaterials": {
       "water": 0,
@@ -5258,7 +5679,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SolarFarm",
@@ -5315,7 +5737,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceResort",
@@ -5357,7 +5780,7 @@
    "specialRules": [
       "Requires_Inhabited_Body",
       "AtrocityToKill",
-	  "NotInIrradiated"
+      "NotInIrradiated"
    ],
    "supportMaterials_month": {
       "money": 0,
@@ -5375,7 +5798,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "SpaceScienceInstitute",
@@ -5400,7 +5824,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -5438,7 +5862,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Spaceworks",
@@ -5478,7 +5903,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "PowerFirst"
+      "PowerFirst",
+      "Shipyard"
    ],
    "supportMaterials_month": {
       "money": 0
@@ -5495,7 +5921,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "Supercollider",
@@ -5520,7 +5947,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 10,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -5562,7 +5989,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "RingCore",
@@ -5589,7 +6017,7 @@
    "incomeOps_month": 0,
    "incomeResearch_month": 0,
    "incomeProjects": 0,
-   "missionControl": -5,
+   "missionControl": -4,
    "incomeVolatiles_month": 0,
    "incomeMetals_month": 0,
    "incomeNobles_month": 0,
@@ -5614,7 +6042,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_large",
    "alertWorthy": true,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "XenoscienceInstitute",
@@ -5639,7 +6068,7 @@
    "incomeMoney_month": 0,
    "incomeInfluence_month": 0,
    "incomeOps_month": 0,
-   "incomeResearch_month": 20,
+   "incomeResearch_month": 15,
    "incomeProjects": 0,
    "missionControl": 0,
    "incomeVolatiles_month": 0,
@@ -5679,7 +6108,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienOutpostCore",
@@ -5732,7 +6162,8 @@
    "baseIconResource": "habmodules/base_T1_AlienOutpostCore",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienSettlementCore",
@@ -5786,7 +6217,8 @@
    "baseIconResource": "habmodules/base_T2_AlienSettlementCore",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienColonyCore",
@@ -5840,7 +6272,8 @@
    "baseIconResource": "habmodules/base_T3_AlienColonyCore",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienPlatformCore",
@@ -5895,7 +6328,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienOrbitalCore",
@@ -5951,7 +6385,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienRingCore",
@@ -6007,7 +6442,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienSpacedock",
@@ -6046,7 +6482,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "Griffins"
+      "Griffins",
+      "Shipyard"
    ],
    "specialRulesValue": 1,
    "supportMaterials_month": {
@@ -6064,7 +6501,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienShipyard",
@@ -6104,7 +6542,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "Griffins"
+      "Griffins",
+      "Shipyard"
    ],
    "specialRulesValue": 1,
    "supportMaterials_month": {
@@ -6122,7 +6561,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienSpaceworks",
@@ -6162,7 +6602,8 @@
    "controlPointCapacity": 0,
    "techBonuses": [],
    "specialRules": [
-      "Griffins"
+      "Griffins",
+      "Shipyard"
    ],
    "specialRulesValue": 1,
    "supportMaterials_month": {
@@ -6180,7 +6621,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienFusionPile",
@@ -6236,7 +6678,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienFusionReactorArray",
@@ -6293,7 +6736,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienFusionReactorFarm",
@@ -6350,7 +6794,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienAssembler",
@@ -6406,7 +6851,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienNanofactory",
@@ -6464,7 +6910,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienNanofacturingComplex",
@@ -6523,7 +6970,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienWormholeFacility",
@@ -6584,7 +7032,8 @@
    "baseIconResource": "habmodules/base_T3_AlienWormholeFacility",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienPointDefenseArray",
@@ -6642,7 +7091,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienLayeredDefenseArray",
@@ -6702,7 +7152,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienBattlestations",
@@ -6764,7 +7215,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienOutpostMiningComplex",
@@ -6817,7 +7269,8 @@
    "baseIconResource": "habmodules/base_T1_AlienOutpostMiningComplex",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienSettlementMiningComplex",
@@ -6871,7 +7324,8 @@
    "baseIconResource": "habmodules/base_T2_AlienSettlementMiningComplex",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienColonyMiningComplex",
@@ -6925,7 +7379,8 @@
    "baseIconResource": "habmodules/base_T3_AlienColonyMiningComplex",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienBarracks",
@@ -6985,7 +7440,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienGarrison",
@@ -7046,7 +7502,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienCitadel",
@@ -7107,7 +7564,163 @@
    "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
    "alertWorthy": true,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
+},
+ {
+   "dataName": "AlienObservationPost",
+   "friendlyName": "Alien Observation Post",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": true,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 1,
+   "requiredProjectName": "Project_AlienMasterProject",
+   "crew": 16,
+   "power": -15,
+   "reserved": 0,
+   "baseMass_tons": 50,
+   "buildTime_Days": 60,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "specialRules": [
+      "AlienSurveillance"
+   ],
+   "specialRulesValue": 1,
+   "supportMaterials_month": {
+      "money": 0
+   },
+   "stationIconResource": "habmodules/station_T1_AlienObservationPost",
+   "stationModelResource": "habmodules/station_T1_AlienObservationPost_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_alien_T1_generic",
+   "alertWorthy": true,
+   "alienModule": true,
+   "objectiveModule": false,
+   "disable": true
+},
+ {
+   "dataName": "AlienSurveillanceArray",
+   "friendlyName": "Alien Surveillance Array",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": true,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 2,
+   "upgradesFromName": "AlienObservationPost",
+   "requiredProjectName": "Project_AlienMasterProject",
+   "crew": 32,
+   "power": -45,
+   "reserved": 0,
+   "baseMass_tons": 250,
+   "buildTime_Days": 90,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "specialRules": [
+      "AlienSurveillance"
+   ],
+   "specialRulesValue": 2,
+   "supportMaterials_month": {
+      "money": 0
+   },
+   "stationIconResource": "habmodules/station_T2_AlienSurveillanceArray",
+   "stationModelResource": "habmodules/station_T2_AlienSurveillanceArray_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_alien_T2_generic",
+   "alertWorthy": true,
+   "alienModule": true,
+   "objectiveModule": false,
+   "disable": true
+},
+ {
+   "dataName": "AlienWatchtower",
+   "friendlyName": "Alien Watchtower",
+   "coreModule": false,
+   "habType": "Station",
+   "onePerHab": true,
+   "automated": false,
+   "allowsShipConstruction": false,
+   "allowsResupply": false,
+   "mine": false,
+   "noBuild": false,
+   "destroyed": false,
+   "tier": 3,
+   "upgradesFromName": "AlienSurveillanceArray",
+   "requiredProjectName": "Project_AlienMasterProject",
+   "crew": 64,
+   "power": -90,
+   "reserved": 0,
+   "baseMass_tons": 1250,
+   "buildTime_Days": 120,
+   "incomeMoney_month": 0,
+   "incomeInfluence_month": 0,
+   "incomeOps_month": 0,
+   "incomeResearch_month": 0,
+   "incomeProjects": 0,
+   "missionControl": 0,
+   "incomeVolatiles_month": 0,
+   "incomeMetals_month": 0,
+   "incomeNobles_month": 0,
+   "incomeFissiles_month": 0,
+   "incomeAntimatter_month": 0,
+   "incomeExotics_month": 0,
+   "spaceCombatValue": 0,
+   "constructionTimeModifier": 1,
+   "miningModifier": 0,
+   "controlPointCapacity": 0,
+   "techBonuses": [],
+   "specialRules": [
+      "AlienSurveillance"
+   ],
+   "specialRulesValue": 3,
+   "supportMaterials_month": {
+      "money": 0
+   },
+   "stationIconResource": "habmodules/station_T3_AlienWatchtower",
+   "stationModelResource": "habmodules/station_T3_AlienWatchtower_Module",
+   "stationDestructionResource": "habmodules/stationdestruction_alien_T3_generic",
+   "alertWorthy": true,
+   "alienModule": true,
+   "objectiveModule": false,
+   "disable": true
 },
  {
    "dataName": "DestroyedModule11",
@@ -7153,7 +7766,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule12",
@@ -7199,7 +7813,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule13",
@@ -7245,7 +7860,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule21",
@@ -7291,7 +7907,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule22",
@@ -7337,7 +7954,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule23",
@@ -7383,7 +8001,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule31",
@@ -7429,7 +8048,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule32",
@@ -7475,7 +8095,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "DestroyedModule33",
@@ -7521,7 +8142,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": false,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule11",
@@ -7567,7 +8189,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule12",
@@ -7613,7 +8236,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule13",
@@ -7659,7 +8283,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T1_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule21",
@@ -7705,7 +8330,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule22",
@@ -7751,7 +8377,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule23",
@@ -7797,7 +8424,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T2_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule31",
@@ -7843,7 +8471,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule32",
@@ -7889,7 +8518,8 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 },
  {
    "dataName": "AlienDestroyedModule33",
@@ -7935,6 +8565,7 @@
    "stationDestructionResource": "habmodules/stationdestruction_T3_generic",
    "alertWorthy": false,
    "alienModule": true,
-   "objectiveModule": false
+   "objectiveModule": false,
+   "disable": false
 }
 ]
